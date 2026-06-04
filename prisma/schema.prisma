@@ -1,0 +1,104 @@
+// prisma/schema.prisma
+// Database schema — activated in Chunk 10
+// Run: npx prisma migrate dev
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ── BOOKING ───────────────────────────────────────────────────────────────
+model Booking {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Customer details
+  name        String
+  phone       String
+  email       String?
+
+  // Trip details
+  origin      String
+  destination String
+  travelDate  DateTime
+  vehicle     String   // sedan | innova | ertiga | tempo
+  tripType    String   // one-way | round-trip | full-day | half-day
+
+  // Pricing
+  estimatedFare Float?
+  confirmedFare Float?
+
+  // Status
+  status      String   @default("pending") // pending | confirmed | completed | cancelled
+
+  // Metadata
+  source      String   @default("website") // website | whatsapp | phone
+  notes       String?
+}
+
+// ── REVIEW ────────────────────────────────────────────────────────────────
+model Review {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+
+  // Reviewer
+  name        String
+  phone       String?
+  city        String?
+
+  // Review content
+  rating      Int      // 1-5
+  comment     String
+  route       String?  // e.g. "Varanasi to Ayodhya"
+
+  // Status
+  isVerified  Boolean  @default(false)
+  isPublished Boolean  @default(false)
+
+  // Source
+  source      String   @default("website") // website | google | whatsapp
+}
+
+// ── ENQUIRY ───────────────────────────────────────────────────────────────
+model Enquiry {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+
+  name        String
+  phone       String
+  email       String?
+  message     String
+  city        String?
+  service     String?
+
+  // Status
+  isReplied   Boolean  @default(false)
+  repliedAt   DateTime?
+}
+
+// ── BLOG ──────────────────────────────────────────────────────────────────
+// Note: Currently using MongoDB + Mongoose (see src/models/Blog.ts)
+// Migrate to Prisma in Chunk 10 when switching to PostgreSQL
+//
+// model Blog {
+//   id          String   @id @default(cuid())
+//   createdAt   DateTime @default(now())
+//   updatedAt   DateTime @updatedAt
+//   title       String
+//   slug        String   @unique
+//   content     String
+//   excerpt     String
+//   imageUrl    String?
+//   author      String   @default("Tirupati Travel")
+//   tags        String[]
+//   category    String   @default("Travel Tips")
+//   publishedAt DateTime @default(now())
+//   isPublished Boolean  @default(false)
+//   metaTitle   String?
+//   metaDesc    String?
+// }

@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import SectionHeader from '@/components/shared/SectionHeader';
 
+
 const THEMES = [
   {
     label: 'Pilgrimage',
     icon: '/svg/icons/kalash.svg',
     href: '/varanasi/varanasi-tour-packages',
     description: 'Char Dham, Jyotirlinga & Shakti Peeths',
+    
   },
   {
     label: 'Heritage',

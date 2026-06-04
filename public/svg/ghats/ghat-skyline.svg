@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <!-- Ghat steps base -->
+  <rect x="0" y="90" width="1440" height="30" fill="currentColor" opacity="0.9"/>
+  <!-- Left ghat steps -->
+  <rect x="0" y="80" width="160" height="10" fill="currentColor" opacity="0.8"/>
+  <rect x="20" y="70" width="120" height="10" fill="currentColor" opacity="0.7"/>
+  <rect x="40" y="60" width="80" height="10" fill="currentColor" opacity="0.6"/>
+  <!-- Mid-left ghat -->
+  <rect x="200" y="82" width="200" height="8" fill="currentColor" opacity="0.75"/>
+  <rect x="220" y="74" width="160" height="8" fill="currentColor" opacity="0.65"/>
+  <!-- Center ghat -->
+  <rect x="450" y="78" width="180" height="12" fill="currentColor" opacity="0.8"/>
+  <rect x="470" y="66" width="140" height="12" fill="currentColor" opacity="0.7"/>
+  <rect x="490" y="54" width="100" height="12" fill="currentColor" opacity="0.6"/>
+  <!-- Mid-right ghat -->
+  <rect x="700" y="80" width="160" height="10" fill="currentColor" opacity="0.78"/>
+  <rect x="720" y="70" width="120" height="10" fill="currentColor" opacity="0.68"/>
+  <!-- Right ghats -->
+  <rect x="920" y="82" width="200" height="8" fill="currentColor" opacity="0.76"/>
+  <rect x="940" y="74" width="160" height="8" fill="currentColor" opacity="0.66"/>
+  <rect x="1180" y="78" width="180" height="12" fill="currentColor" opacity="0.8"/>
+  <rect x="1200" y="66" width="140" height="12" fill="currentColor" opacity="0.7"/>
+  <!-- Temple spire 1 -->
+  <polygon points="80,20 90,60 70,60" fill="currentColor" opacity="0.85"/>
+  <polygon points="78,10 90,20 66,20" fill="currentColor" opacity="0.9"/>
+  <line x1="80" y1="10" x2="80" y2="2" stroke="currentColor" stroke-width="1.5" opacity="0.9"/>
+  <!-- Temple spire 2 -->
+  <polygon points="300,30 312,72 288,72" fill="currentColor" opacity="0.8"/>
+  <polygon points="298,18 312,30 284,30" fill="currentColor" opacity="0.85"/>
+  <!-- Temple spire 3 (Kashi Vishwanath) -->
+  <polygon points="560,12 576,58 544,58" fill="currentColor" opacity="0.92"/>
+  <polygon points="557,2 576,12 540,12" fill="currentColor" opacity="0.95"/>
+  <line x1="560" y1="2" x2="560" y2="-6" stroke="currentColor" stroke-width="2" opacity="0.95"/>
+  <!-- Temple spire 4 -->
+  <polygon points="760,22 772,68 748,68" fill="currentColor" opacity="0.82"/>
+  <polygon points="758,10 772,22 744,22" fill="currentColor" opacity="0.87"/>
+  <!-- Temple spire 5 -->
+  <polygon points="1000,25 1013,70 987,70" fill="currentColor" opacity="0.84"/>
+  <polygon points="998,12 1013,25 983,25" fill="currentColor" opacity="0.89"/>
+  <!-- Temple spire 6 -->
+  <polygon points="1260,18 1274,62 1246,62" fill="currentColor" opacity="0.86"/>
+  <polygon points="1258,6 1274,18 1242,18" fill="currentColor" opacity="0.91"/>
+</svg>

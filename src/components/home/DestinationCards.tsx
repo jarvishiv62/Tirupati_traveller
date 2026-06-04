@@ -40,7 +40,7 @@ const DESTINATIONS = [
     image: '/assets/images/Ayodhya/ram_janm.jpeg',
     alt: 'Ram Mandir Ayodhya',
     badge: '5 Tours',
-    subtitle: 'Ram Janmabhoomi · Sarayu',
+    subtitle: 'Ram Janmabhoomi ',
   },
 ];
 

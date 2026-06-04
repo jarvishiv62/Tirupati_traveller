@@ -179,6 +179,7 @@
 
   .card-temple {
     @apply bg-white overflow-hidden border border-border-warm;
+    position: relative;
     border-radius: 50% 50% 1rem 1rem / 2rem 2rem 1rem 1rem;
     box-shadow: var(--shadow-temple);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -256,6 +257,7 @@
   /* ── BADGES ──────────────────────────────────────────────────── */
   .badge {
     @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+    postion: absolute;
   }
 
   .badge-primary {
