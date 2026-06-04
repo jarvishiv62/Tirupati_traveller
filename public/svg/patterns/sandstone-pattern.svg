@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <!--
+    Sandstone dot pattern — used as a subtle repeating texture overlay.
+    Applied via .texture-cream CSS class at 1–2% opacity.
+    Color inherits from parent via currentColor.
+    Tile: 20x20px with 4 offset dots simulating a sandstone grain.
+  -->
+  <!-- Primary dots -->
+  <circle cx="2" cy="2" r="1" fill="currentColor" opacity="0.8"/>
+  <circle cx="12" cy="2" r="0.8" fill="currentColor" opacity="0.6"/>
+  <!-- Second row offset -->
+  <circle cx="7" cy="7" r="1" fill="currentColor" opacity="0.7"/>
+  <circle cx="17" cy="7" r="0.8" fill="currentColor" opacity="0.5"/>
+  <!-- Third row -->
+  <circle cx="2" cy="12" r="0.8" fill="currentColor" opacity="0.6"/>
+  <circle cx="12" cy="12" r="1" fill="currentColor" opacity="0.7"/>
+  <!-- Fourth row offset -->
+  <circle cx="7" cy="17" r="0.8" fill="currentColor" opacity="0.5"/>
+  <circle cx="17" cy="17" r="1" fill="currentColor" opacity="0.8"/>
+  <!-- Micro accent dots for grain texture -->
+  <circle cx="4" cy="15" r="0.4" fill="currentColor" opacity="0.3"/>
+  <circle cx="15" cy="4" r="0.4" fill="currentColor" opacity="0.3"/>
+  <circle cx="9" cy="10" r="0.4" fill="currentColor" opacity="0.25"/>
+</svg>

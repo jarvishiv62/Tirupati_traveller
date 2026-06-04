@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Flame outer -->
+  <path d="M12 2 C11 4 9.5 5.5 9.5 7.5 C9.5 9.5 10.5 10.5 12 10.5 C13.5 10.5 14.5 9.5 14.5 7.5 C14.5 5.5 13 4 12 2Z" fill="currentColor" opacity="0.2"/>
+  <path d="M12 2 C11 4 9.5 5.5 9.5 7.5 C9.5 9.5 10.5 10.5 12 10.5 C13.5 10.5 14.5 9.5 14.5 7.5 C14.5 5.5 13 4 12 2Z"/>
+  <!-- Flame inner -->
+  <path d="M12 5 C11.5 6 11 7 11 8 C11 9 11.5 9.5 12 9.5 C12.5 9.5 13 9 13 8 C13 7 12.5 6 12 5Z" fill="currentColor" opacity="0.5" stroke="none"/>
+  <!-- Wick -->
+  <line x1="12" y1="10.5" x2="12" y2="13"/>
+  <!-- Diya bowl -->
+  <path d="M6 13 Q6 17 12 17.5 Q18 17 18 13Z" fill="currentColor" opacity="0.1"/>
+  <path d="M6 13 Q6 17 12 17.5 Q18 17 18 13Z"/>
+  <!-- Diya spout (left) -->
+  <path d="M6 13 Q4.5 13 4 14 Q4.5 15 6 14.5"/>
+  <!-- Diya rim -->
+  <line x1="6" y1="13" x2="18" y2="13"/>
+  <!-- Base shadow / surface -->
+  <path d="M7 17.5 Q12 19 17 17.5" stroke-width="1" opacity="0.5"/>
+  <!-- Decorative dots on bowl -->
+  <circle cx="9" cy="15" r="0.4" fill="currentColor" stroke="none"/>
+  <circle cx="12" cy="15.8" r="0.4" fill="currentColor" stroke="none"/>
+  <circle cx="15" cy="15" r="0.4" fill="currentColor" stroke="none"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Main building -->
+  <rect x="10" y="28" width="44" height="26" rx="2" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="2.5"/>
+  <!-- Temple arch roof -->
+  <path d="M10 28 Q32 10 54 28" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Central spire / shikhara -->
+  <polygon points="32,8 36,20 28,20" fill="currentColor" opacity="0.6"/>
+  <circle cx="32" cy="7" r="2" fill="currentColor"/>
+  <!-- Door (arch-shaped) -->
+  <path d="M27 54 L27 42 Q32 37 37 42 L37 54" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2"/>
+  <!-- Left window -->
+  <rect x="13" y="33" width="8" height="7" rx="2" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
+  <!-- Right window -->
+  <rect x="43" y="33" width="8" height="7" rx="2" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
+  <!-- Left upper window -->
+  <rect x="16" y="22" width="6" height="5" rx="1.5" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/>
+  <!-- Right upper window -->
+  <rect x="42" y="22" width="6" height="5" rx="1.5" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/>
+  <!-- Decorative band -->
+  <line x1="10" y1="44" x2="54" y2="44" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+  <!-- Ground line -->
+  <line x1="6" y1="54" x2="58" y2="54" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+</svg>

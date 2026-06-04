@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Ganga waves -->
+  <path d="M6 50 Q12 44 18 50 Q24 56 30 50 Q36 44 42 50 Q48 56 54 50 Q57 47 58 50" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <!-- Boat hull -->
+  <path d="M12 44 Q32 52 52 44 L48 36 Q32 40 16 36 Z" fill="currentColor" opacity="0.18" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Boat mast -->
+  <line x1="32" y1="36" x2="32" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sail (temple-arch shaped top) -->
+  <path d="M32 16 Q20 20 20 30 L32 36 Z" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="2"/>
+  <path d="M32 16 Q44 20 44 30 L32 36 Z" fill="currentColor" opacity="0.12" stroke="currentColor" stroke-width="2"/>
+  <!-- Diya lamp on boat -->
+  <ellipse cx="32" cy="35" rx="4" ry="1.5" fill="currentColor" opacity="0.5"/>
+  <path d="M30 35 Q32 32 34 35" fill="currentColor" opacity="0.7"/>
+  <!-- Flame -->
+  <path d="M32 33 Q30.5 30.5 32 28.5 Q33.5 30.5 32 33Z" fill="currentColor"/>
+  <!-- Decorative lotus petals at base of mast -->
+  <path d="M29 36.5 Q32 34 35 36.5" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6"/>
+</svg>
