@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 
 const PHONE = '8726124680';

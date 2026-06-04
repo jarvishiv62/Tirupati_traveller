@@ -26,7 +26,7 @@ export default function AboutSection() {
           <div className="w-full md:w-1/2 flex-shrink-0">
             <div className="arch-frame relative overflow-hidden rounded-2xl shadow-temple">
               <Image
-                src="/assets/images/about-incrdble.webp"
+                src="/assets/images/VNS_Places/banaras_arti.jpg"
                 alt="Tirupati Travel — trusted cab service in Varanasi"
                 width={600}
                 height={500}

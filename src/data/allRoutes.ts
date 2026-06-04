@@ -1511,22 +1511,52 @@ export const allRoutes: RouteEntry[] = [
   },
   {
     slug: 'ayodhya/ayodhya-dham',
-    template: 'PlacesToVisitTemplate',
-    dataKey: 'placesToVisit.ayodhyaDham',
+    template: 'CityLandingTemplate',
+    dataKey: 'cityLanding.ayodhyaDham',
     seo: {
-      title: 'Ayodhya Dham | Ram Mandir & Pilgrimage Guide | Tirupati Travel',
-      description: 'Complete guide to Ayodhya Dham. Ram Mandir, Hanuman Garhi & all sacred sites. Book darshan tour with Tirupati Travel.',
+      title: 'Ayodhya Dham Darshan Package | Ram Mandir Tour | Tirupati Travel',
+      description: 'Complete Ayodhya Dham darshan — Ram Mandir, Hanuman Garhi, Kanak Bhawan, Saryu Ghat. Book cab packages for Ayodhya Dham with Tirupati Travel.',
       canonical: `${BASE}/ayodhya/ayodhya-dham`,
     },
   },
   {
-    slug: 'vindhyachal/vindhyachal-mandir',
+    slug: 'ayodhya/places-to-visit-in-ayodhya',
     template: 'PlacesToVisitTemplate',
-    dataKey: 'placesToVisit.vindhyachalMandir',
+    dataKey: 'placesToVisit.ayodhya',
     seo: {
-      title: 'Vindhyachal Mandir | Vindhyavasini Devi Darshan | Tirupati Travel',
-      description: 'Complete guide to Vindhyachal Mandir. Vindhyavasini Devi darshan & nearby temples. Book cab with Tirupati Travel.',
+      title: 'Places to Visit in Ayodhya | Ram Mandir Tour | Tirupati Travel',
+      description: 'Top places to visit in Ayodhya — Ram Mandir, Hanuman Garhi, Kanak Bhawan, Saryu Ghat & more. Book an Ayodhya sightseeing cab with Tirupati Travel.',
+      canonical: `${BASE}/ayodhya/places-to-visit-in-ayodhya`,
+    },
+  },
+  {
+    slug: 'vindhyachal/vindhyachal-mandir',
+    template: 'CityLandingTemplate',
+    dataKey: 'cityLanding.vindhyachalMandir',
+    seo: {
+      title: 'Vindhyachal Mandir Darshan | Shakti Peeth Tour | Tirupati Travel',
+      description: 'Complete Vindhyachal Mandir darshan — Vindhyavasini, Ashtabhuja, Kali Khoh temples. Book cab packages for the three Shakti Peeths with Tirupati Travel.',
       canonical: `${BASE}/vindhyachal/vindhyachal-mandir`,
+    },
+  },
+  {
+    slug: 'vindhyachal/places-to-visit-in-vindhyachal',
+    template: 'PlacesToVisitTemplate',
+    dataKey: 'placesToVisit.vindhyachal',
+    seo: {
+      title: 'Places to Visit in Vindhyachal | Shakti Peeth Temple Tour | Tirupati Travel',
+      description: 'Explore places to visit in Vindhyachal — Vindhyavasini Temple, Ashtabhuja, Kali Khoh & Ganga Ghats. Book a Vindhyachal darshan cab with Tirupati Travel.',
+      canonical: `${BASE}/vindhyachal/places-to-visit-in-vindhyachal`,
+    },
+  },
+  {
+    slug: 'lucknow/places-to-visit-in-lucknow',
+    template: 'PlacesToVisitTemplate',
+    dataKey: 'placesToVisit.lucknow',
+    seo: {
+      title: 'Places to Visit in Lucknow | Top Tourist Spots City of Nawabs | Tirupati Travel',
+      description: 'Explore the top places to visit in Lucknow — Bara Imambara, Rumi Darwaza, British Residency, Chota Imambara & more. Book a Lucknow sightseeing cab with Tirupati Travel.',
+      canonical: `${BASE}/lucknow/places-to-visit-in-lucknow`,
     },
   },
 

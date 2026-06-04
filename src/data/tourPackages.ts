@@ -30,7 +30,7 @@ export const tourPackages: TourPackage[] = [
     packageName: 'Varanasi Darshan',
     city: 'Varanasi',
     duration: '1 Night 2 Days',
-    image: '/assets/images/varanasi-tour-package.webp',
+    image: '/assets/images/varanasi-tour-package.jpg',
     itinerary: [
       {
         day: 1,
@@ -93,7 +93,7 @@ export const tourPackages: TourPackage[] = [
     packageName: 'Varanasi Explorer',
     city: 'Varanasi',
     duration: '2 Nights 3 Days',
-    image: '/assets/images/varanasi-tour-package.webp',
+    image: '/assets/images/varanasitour-package.jpeg',
     itinerary: [
       {
         day: 1,
@@ -160,7 +160,7 @@ export const tourPackages: TourPackage[] = [
     packageName: 'Ayodhya Darshan',
     city: 'Ayodhya',
     duration: '1 Night 2 Days',
-    image: '/assets/images/ayodhya.webp',
+    image: '/assets/images/Ayodhya/ayodhya.jpeg',
     itinerary: [
       {
         day: 1,
@@ -218,7 +218,7 @@ export const tourPackages: TourPackage[] = [
     packageName: 'Ayodhya Pilgrimage',
     city: 'Ayodhya',
     duration: '2 Nights 3 Days',
-    image: '/assets/images/ayodhya.webp',
+    image: '/assets/images/Ayodhya/Ayodhya_fort.jpeg',
     itinerary: [
       {
         day: 1,

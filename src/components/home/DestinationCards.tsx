@@ -5,7 +5,7 @@ const DESTINATIONS = [
   {
     city: 'Varanasi',
     slug: '/varanasi',
-    image: '/assets/images/varanasi-tour-package.webp',
+    image: '/assets/images/varanasi-tour-package.jpg',
     alt: 'Dashashwamedh Ghat Varanasi',
     badge: '12 Tours',
     subtitle: 'Kashi · Banaras',
@@ -13,7 +13,7 @@ const DESTINATIONS = [
   {
     city: 'Allahabad',
     slug: '/allahabad',
-    image: '/assets/images/allahabad.webp',
+    image: '/assets/images/Allahabad_places/khusro.jpg',
     alt: 'Sangam Prayagraj Allahabad',
     badge: '6 Tours',
     subtitle: 'Prayagraj · Triveni Sangam',
@@ -21,7 +21,7 @@ const DESTINATIONS = [
   {
     city: 'Gaya',
     slug: '/gaya',
-    image: '/assets/images/gaya.webp',
+    image: '/assets/images/Gaya_places/Gaya.jpeg',
     alt: 'Vishnupad Temple Gaya Bihar',
     badge: '4 Tours',
     subtitle: 'Bodh Gaya · Falgu River',
@@ -29,7 +29,7 @@ const DESTINATIONS = [
   {
     city: 'Vindhyachal',
     slug: '/vindhyachal',
-    image: '/assets/images/vindhyachal.webp',
+    image: '/assets/images/vindhyachal/vindhyachal.png',
     alt: 'Vindhyachal Mandir Mirzapur',
     badge: '3 Tours',
     subtitle: 'Mirzapur · Shakti Peeth',
@@ -37,7 +37,7 @@ const DESTINATIONS = [
   {
     city: 'Ayodhya',
     slug: '/ayodhya',
-    image: '/assets/images/ayodhya.webp',
+    image: '/assets/images/Ayodhya/ram_janm.jpeg',
     alt: 'Ram Mandir Ayodhya',
     badge: '5 Tours',
     subtitle: 'Ram Janmabhoomi · Sarayu',
