@@ -126,7 +126,15 @@ export default function HeroSection() {
   }, []);
 
   const waLink = buildWALink(
-    "Hi, I want to book a pilgrimage tour or cab with Tirupati Travel. Please share details.",
+    `Hi Tirupati Travel,
+
+I would like a fare estimate.
+
+Pickup Location:
+Travel Date:
+Number of Passengers:
+
+Please share available options.`
   );
 
   return (
@@ -196,11 +204,10 @@ export default function HeroSection() {
             Varanasi&apos;s Most Trusted <br className="hidden sm:block" />
             <span className="relative inline-block">
               <span
-                className={`hero-rotating-word text-red-600 transition-all duration-350 ${
-                  visible
+                className={`hero-rotating-word text-red-600 transition-all duration-350 ${visible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 -translate-y-3"
-                }`}
+                  }`}
               >
                 {ROTATING_WORDS[wordIndex]}
               </span>
@@ -263,9 +270,8 @@ export default function HeroSection() {
 
       {/* ── Scroll indicator ────────────────────────────── */}
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 transition-opacity duration-500 ${
-          scrolled ? "opacity-0" : "opacity-100"
-        }`}
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 transition-opacity duration-500 ${scrolled ? "opacity-0" : "opacity-100"
+          }`}
       >
         <span className="text-white/50 text-xs tracking-widest uppercase">
           Scroll

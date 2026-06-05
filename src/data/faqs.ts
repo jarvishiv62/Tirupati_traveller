@@ -41,4 +41,16 @@ export const faqs: FAQ[] = [
     answer:
       'Yes, absolutely. All our drivers are local professionals with deep knowledge of routes across UP and Bihar. Vehicles are well-maintained and regularly serviced. We are available 24/7 for night pickups and early morning airport transfers. You can track your driver location and our support team is always reachable on call.',
   },
+  {
+    id: "faq-7",
+    question: "Do you offer round-trip taxi services from Varanasi to other cities?",
+    answer:
+      "Yes, we provide round-trip services to major nearby cities including Lucknow, Prayagraj, Ayodhya, Bodh Gaya, Gaya, Vindhyachal, Gorakhpur, Mirzapur, and more. You can book an outstation round trip for any number of days with comfortable overnight stays if needed.",
+  },
+  {
+    id: "faq-8",
+    question: "Are your drivers reliable for city drop-offs and pick-ups?",
+    answer:
+      "Absolutely. All our drivers are local, experienced, and know Varanasi city thoroughly including all ghats, temples, hotels, and tourist spots. They ensure you reach your destination safely and on time, whether it’s a drop-off or pick-up.",
+  },
 ];

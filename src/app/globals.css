@@ -548,8 +548,8 @@
 
 /* Car driving left → right */
 @keyframes carDrive {
-  0%   { right: -60px; }
-  100% { right: calc(100% + 60px); }
+  0%   { left: -60px; }
+  100% { left: calc(100% + 60px); }
 }
 
 /* Slower car for footer road */
@@ -598,4 +598,438 @@
 @media print {
   .no-print { display: none !important; }
   body { background: white; color: black; }
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   ── SACRED DIVIDER ───────────────────────────────────────────────
+══════════════════════════════════════════════════════════════════ */
+
+/* Gold flanking lines in mandala divider */
+.sacred-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,214,0,0.35), transparent);
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   ── EEAT SECTION ─────────────────────────────────────────────────
+══════════════════════════════════════════════════════════════════ */
+
+/* Background OM watermark */
+.eeat-bg-om {
+  position: absolute;
+  right: -4%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 360px;
+  font-family: serif;
+  line-height: 1;
+  color: rgba(255, 107, 0, 0.04);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Layer pill labels ─── */
+.eeat-layer-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.eeat-layer-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #FF6B00, #E65100);
+  color: #fff;
+  flex-shrink: 0;
+}
+.eeat-layer-pill--navy {
+  background: linear-gradient(135deg, #1A237E, #3949AB);
+}
+.eeat-layer-pill--gold {
+  background: linear-gradient(135deg, #F9A825, #FFD600);
+  color: #1A237E;
+}
+.eeat-layer-title {
+  font-family: var(--font-playfair, Georgia, serif);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1A237E;
+}
+
+/* ── Stat cards ─── */
+.eeat-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 16px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #E8DDD0;
+  box-shadow: 0 4px 20px rgba(196,168,130,0.15);
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.eeat-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+.eeat-stat-card--full { padding: 28px 20px; }
+
+.eeat-stat-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 4px;
+}
+.eeat-stat-icon--lg { width: 56px; height: 56px; border-radius: 16px; }
+
+.eeat-stat-value {
+  font-family: var(--font-playfair, Georgia, serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.eeat-stat-value--lg { font-size: 2.25rem; }
+
+.eeat-stat-label {
+  font-size: 0.75rem;
+  color: #616161;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* ── Expertise cards ─── */
+.eeat-expertise-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #E8DDD0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.eeat-expertise-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,107,0,0.25);
+  box-shadow: 0 8px 28px rgba(255,107,0,0.1);
+}
+.eeat-expertise-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(255,107,0,0.08);
+  display: flex; align-items: center; justify-content: center;
+}
+.eeat-expertise-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #212121;
+  margin-bottom: 3px;
+}
+.eeat-expertise-desc {
+  font-size: 0.78rem;
+  color: #616161;
+  line-height: 1.4;
+}
+
+/* ── Authority badge cards ─── */
+.eeat-authority-card {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.2s ease;
+}
+.eeat-authority-card:hover { transform: translateY(-2px); }
+.eeat-authority-icon  { font-size: 28px; margin-bottom: 4px; }
+.eeat-authority-title {
+  font-weight: 700; font-size: 0.9rem;
+  color: rgba(255,255,255,0.95);
+}
+.eeat-authority-subtitle {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.eeat-authority-detail {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.65);
+  margin-top: 2px;
+}
+
+/* ── Trust badge cards ─── */
+.eeat-trust-badge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 16px 12px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #E8DDD0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.eeat-trust-badge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+}
+.eeat-trust-badge-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.03);
+  display: flex; align-items: center; justify-content: center;
+}
+.eeat-trust-badge-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #212121;
+  line-height: 1.3;
+}
+
+/* ── Founder quote block ─── */
+.eeat-founder-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(255,214,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+.eeat-founder-block::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(255,107,0,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.eeat-founder-icon {
+  width: 72px; height: 72px; flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,107,0,0.25), rgba(255,214,0,0.15));
+  border: 2px solid rgba(255,214,0,0.25);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.eeat-founder-om {
+  font-size: 36px;
+  font-family: serif;
+  color: rgba(255,214,0,0.75);
+  line-height: 1;
+}
+.eeat-founder-icon-ring {
+  position: absolute; inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,214,0,0.2);
+  pointer-events: none;
+}
+
+.eeat-founder-content { position: relative; z-index: 1; flex: 1; }
+.eeat-founder-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 80px; line-height: 0.6;
+  color: rgba(255,214,0,0.25);
+  float: left; margin-right: 4px; margin-top: 10px;
+  pointer-events: none; user-select: none;
+}
+.eeat-founder-quote {
+  font-family: var(--font-playfair, Georgia, serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.eeat-founder-quote em { color: #FFD600; font-style: normal; font-weight: 600; }
+.eeat-founder-attribution { display: flex; flex-direction: column; gap: 2px; }
+.eeat-founder-name  { font-weight: 700; font-size: 0.9rem; color: #fff; }
+.eeat-founder-title { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+
+@media (max-width: 640px) {
+  .eeat-founder-block { flex-direction: column; padding: 20px; }
+  .eeat-founder-icon  { width: 56px; height: 56px; }
+  .eeat-founder-quote { font-size: 0.9rem; }
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   ── CTA BANNER ───────────────────────────────────────────────────
+══════════════════════════════════════════════════════════════════ */
+
+.cta-banner-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Full gradient background */
+.cta-banner-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #0D1257 0%, #1A237E 35%, #2A1A6E 65%, #1C0F4A 100%);
+}
+
+/* Mandala watermarks */
+.cta-mandala {
+  position: absolute;
+  width: 360px; height: 360px;
+  pointer-events: none; user-select: none;
+}
+.cta-mandala--left {
+  left: -80px; top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,107,0,0.07);
+}
+.cta-mandala--right {
+  right: -80px; top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,214,0,0.06);
+}
+
+/* Glow blobs */
+.cta-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.cta-glow--orange {
+  width: 500px; height: 400px;
+  top: -100px; left: 10%;
+  background: radial-gradient(circle, rgba(255,107,0,0.1) 0%, transparent 70%);
+}
+.cta-glow--gold {
+  width: 400px; height: 300px;
+  bottom: -80px; right: 10%;
+  background: radial-gradient(circle, rgba(255,214,0,0.08) 0%, transparent 70%);
+}
+
+/* Glassmorphism card */
+.cta-glass-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 28px;
+  padding: 40px 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-glass-card::before {
+  content: '';
+  position: absolute; inset: 0; border-radius: 28px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,107,0,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Eyebrow */
+.cta-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 16px; border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,214,0,0.2);
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,214,0,0.85);
+  margin-bottom: 20px;
+}
+
+/* Headline */
+.cta-headline {
+  font-family: var(--font-playfair, Georgia, serif);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+/* Subheadline */
+.cta-subheadline {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.72);
+  max-width: 520px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+
+/* Primary CTA button — WhatsApp green with glow */
+.cta-btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 28px; border-radius: 999px;
+  background-color: #25D366;
+  color: #fff; font-weight: 700; font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: btnPulse 3s ease-in-out infinite;
+}
+.cta-btn-primary:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 32px rgba(37,211,102,0.55);
+}
+
+/* Secondary CTA button — outline white */
+.cta-btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 28px; border-radius: 999px;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: #fff; font-weight: 600; font-size: 1rem;
+  background: transparent; text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.cta-btn-secondary:hover {
+  border-color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.08);
+  transform: scale(1.02);
+}
+
+/* Trust micro-badges row */
+.cta-trust-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px;
+  margin-bottom: 20px;
+}
+.cta-trust-item {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 0.72rem; color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+
+/* Packages link */
+.cta-packages-link {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.cta-packages-anchor {
+  font-size: 0.85rem; font-weight: 600;
+  color: rgba(255,214,0,0.8);
+  text-decoration: none; border-bottom: 1px solid rgba(255,214,0,0.3);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.cta-packages-anchor:hover {
+  color: #FFD600;
+  border-color: rgba(255,214,0,0.8);
+}
+
+@media (max-width: 640px) {
+  .cta-glass-card { padding: 28px 20px; }
+  .cta-mandala    { width: 220px; height: 220px; }
+  .cta-mandala--left  { left: -60px; }
+  .cta-mandala--right { right: -60px; }
 }
