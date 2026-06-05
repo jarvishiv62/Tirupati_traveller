@@ -1,27 +1,25 @@
 // src/components/shared/Footer.tsx
-// Site-wide footer — Server Component
-
 import Link from 'next/link';
 
 const PHONE = '8726124680';
 const WA = '918726124680';
 
 const QUICK_LINKS = [
-  { label: 'Varanasi Taxi', href: '/varanasi' },
-  { label: 'Ayodhya Taxi', href: '/ayodhya' },
-  { label: 'Allahabad Taxi', href: '/allahabad' },
-  { label: 'Lucknow Taxi', href: '/lucknow' },
-  { label: 'Gaya Taxi', href: '/gaya' },
-  { label: 'Vindhyachal Taxi', href: '/vindhyachal' },
+  { label: 'Varanasi Taxi', href: '/varanasi', icon: '🕌' },
+  { label: 'Ayodhya Taxi', href: '/ayodhya', icon: '🛕' },
+  { label: 'Allahabad Taxi', href: '/allahabad', icon: '🏛️' },
+  { label: 'Lucknow Taxi', href: '/lucknow', icon: '🌆' },
+  { label: 'Gaya Taxi', href: '/gaya', icon: '☸️' },
+  { label: 'Vindhyachal Taxi', href: '/vindhyachal', icon: '⛰️' },
 ];
 
 const POPULAR_ROUTES = [
-  { label: 'Varanasi to Ayodhya', href: '/varanasi/varanasi-to-ayodhya-taxi' },
-  { label: 'Varanasi to Gaya', href: '/varanasi/varanasi-to-gaya-taxi' },
-  { label: 'Varanasi to Allahabad', href: '/varanasi/varanasi-to-allahabad-taxi' },
-  { label: 'Varanasi to Lucknow', href: '/varanasi/varanasi-to-lucknow-taxi' },
-  { label: 'Varanasi to Patna', href: '/varanasi/varanasi-to-patna-taxi' },
-  { label: 'Varanasi to Sarnath', href: '/varanasi/varanasi-to-sarnath-taxi' },
+  { label: 'Varanasi → Ayodhya', href: '/varanasi/varanasi-to-ayodhya-taxi' },
+  { label: 'Varanasi → Gaya', href: '/varanasi/varanasi-to-gaya-taxi' },
+  { label: 'Varanasi → Allahabad', href: '/varanasi/varanasi-to-allahabad-taxi' },
+  { label: 'Varanasi → Lucknow', href: '/varanasi/varanasi-to-lucknow-taxi' },
+  { label: 'Varanasi → Patna', href: '/varanasi/varanasi-to-patna-taxi' },
+  { label: 'Varanasi → Sarnath', href: '/varanasi/varanasi-to-sarnath-taxi' },
 ];
 
 const SERVICES = [
@@ -41,84 +39,113 @@ const LEGAL = [
   { label: 'Blog', href: '/blogs' },
 ];
 
+const TRUST_STATS = [
+  { value: '10+', label: 'Years Serving Pilgrims', icon: '🏆' },
+  { value: '50K+', label: 'Happy Pilgrims', icon: '🙏' },
+  { value: '24/7', label: 'Always Available', icon: '⏰' },
+  { value: '100+', label: 'Sacred Routes', icon: '🗺️' },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-section-dark text-white relative overflow-hidden">
-      {/* Mandala watermark */}
-      <div
-        className="absolute top-1/2 right-0 -translate-y-1/2 text-white pointer-events-none select-none"
-        style={{ opacity: 0.04, fontSize: '256px', lineHeight: 1 }}
-        aria-hidden="true"
-      >
-        ☸
-      </div>
-      <div
-        className="absolute bottom-0 left-8 text-white pointer-events-none select-none"
-        style={{ opacity: 0.03, fontSize: '160px', lineHeight: 1 }}
-        aria-hidden="true"
-      >
-        ❀
+    <footer className="relative overflow-hidden" style={{
+      background: 'linear-gradient(160deg, #0D1257 0%, #1A237E 40%, #1C1F6B 70%, #0F1545 100%)'
+    }}>
+
+      {/* ── Decorative background elements ──────────────── */}
+      {/* Large Om watermark */}
+      <div className="footer-om-bg" aria-hidden="true">ॐ</div>
+
+      {/* Chakra top-left */}
+      <div className="footer-chakra-bg" aria-hidden="true">☸</div>
+
+      {/* Gradient glow blobs */}
+      <div className="footer-glow-orange" aria-hidden="true" />
+      <div className="footer-glow-gold" aria-hidden="true" />
+
+      {/* ── Stats strip ─────────────────────────────────── */}
+      <div className="footer-stats-strip relative z-10">
+        <div className="container-site">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
+            {TRUST_STATS.map(({ value, label, icon }) => (
+              <div key={label} className="footer-stat-cell">
+                <span className="text-2xl mb-1" aria-hidden="true">{icon}</span>
+                <span className="text-gold font-bold text-2xl font-serif leading-none">{value}</span>
+                <span className="text-white/60 text-xs mt-0.5 text-center leading-tight">{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* Main footer grid */}
+      {/* ── Main footer grid ─────────────────────────────── */}
       <div className="container-site section-pad-sm relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
 
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold"
-                style={{ background: 'linear-gradient(135deg, #FF6B00, #E65100)' }}
-                aria-hidden="true"
-              >
-                TT
+            <Link href="/" className="flex items-center gap-2.5 mb-5 group">
+              <div className="footer-logo-mark">
+                <span className="footer-logo-om" aria-hidden="true">ॐ</span>
+                <span className="font-bold text-white text-xs relative z-10">TT</span>
               </div>
               <div>
-                <div className="font-serif font-bold text-lg text-white leading-tight">
+                <div className="font-serif font-bold text-lg text-white leading-tight
+                                group-hover:text-gold transition-colors duration-200">
                   Tirupati Travel
                 </div>
-                <div className="text-xs text-white/60 leading-tight">Varanasi&apos;s Trusted Partner</div>
+                <div className="text-white/50 text-[10px] uppercase tracking-widest leading-tight">
+                  Varanasi&apos;s Trusted Partner
+                </div>
               </div>
             </Link>
-            <p className="text-white/70 text-sm leading-relaxed mb-4 max-w-sm">
-              Varanasi&apos;s most trusted travel agency since 2014. Pilgrimage tours, outstation taxi
-              &amp; local cab services across Varanasi, Ayodhya, Allahabad, Gaya &amp; beyond.
+
+            <p className="text-white/65 text-sm leading-relaxed mb-5 max-w-xs">
+              Varanasi&apos;s most trusted travel agency since 2014. Pilgrimage tours, outstation
+              taxi &amp; local cabs across Varanasi, Ayodhya, Allahabad, Gaya &amp; beyond.
             </p>
-            <div className="space-y-2 text-sm text-white/70">
-              <p>📍 L-2/72, Dashashwamedh Plaza,<br />Dashashwamedh Gath, Varanasi - 221001</p>
-              <p>
-                📞{' '}
-                <a href={`tel:${PHONE}`} className="text-accent hover:text-white transition-colors">
-                  {PHONE}
-                </a>
-              </p>
-              <p>
-                ✉{' '}
-                <a
-                  href="mailto:info@tirupatitravel.in"
-                  className="text-accent hover:text-white transition-colors"
-                >
-                  info@tirupatitravel.in
-                </a>
-              </p>
+
+            <div className="space-y-2.5 text-sm">
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
+                className="flex items-start gap-2.5 text-white/65 hover:text-gold transition-colors group">
+                <span className="text-base mt-0.5 group-hover:animate-bounce-sm">📍</span>
+                <span>L-2/72, Dashashwamedh Plaza,<br />Dashashwamedh Gath, Varanasi - 221001</span>
+              </a>
+              <a href={`tel:${PHONE}`}
+                className="flex items-center gap-2.5 text-white/65 hover:text-gold transition-colors">
+                <span className="text-base">📞</span>
+                <span className="font-semibold">{PHONE}</span>
+              </a>
+              <a href="mailto:info@tirupatitravel.in"
+                className="flex items-center gap-2.5 text-white/65 hover:text-gold transition-colors">
+                <span className="text-base">✉️</span>
+                info@tirupatitravel.in
+              </a>
             </div>
+
+            {/* Divider with Om */}
+            <div className="footer-om-divider">
+              <span className="footer-om-divider-line" />
+              <span className="text-gold/60 text-lg font-serif px-3 select-none">ॐ</span>
+              <span className="footer-om-divider-line" />
+            </div>
+            <p className="text-white/30 text-xs italic">
+              &quot;काशी विश्वनाथ की जय&quot;
+            </p>
           </div>
 
-          {/* Quick links */}
+          {/* Cities */}
           <div>
-            <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">
-              Cities
+            <h3 className="footer-col-heading">
+              <span>🗺️</span> Cities
             </h3>
             <ul className="space-y-2">
               {QUICK_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 text-sm hover:text-accent transition-colors"
-                  >
+                  <Link href={link.href} className="footer-link">
+                    <span className="text-sm">{link.icon}</span>
                     {link.label}
                   </Link>
                 </li>
@@ -128,16 +155,13 @@ export default function Footer() {
 
           {/* Popular routes */}
           <div>
-            <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">
-              Popular Routes
+            <h3 className="footer-col-heading">
+              <span>🚗</span> Routes
             </h3>
             <ul className="space-y-2">
               {POPULAR_ROUTES.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 text-sm hover:text-accent transition-colors"
-                  >
+                  <Link href={link.href} className="footer-link">
                     {link.label}
                   </Link>
                 </li>
@@ -145,65 +169,81 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services & legal */}
+          {/* Services + Company */}
           <div>
-            <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">
-              Services
+            <h3 className="footer-col-heading">
+              <span>🚖</span> Services
             </h3>
             <ul className="space-y-2 mb-6">
               {SERVICES.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 text-sm hover:text-accent transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  <Link href={link.href} className="footer-link">{link.label}</Link>
                 </li>
               ))}
             </ul>
-            <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">
-              Company
+            <h3 className="footer-col-heading">
+              <span>ℹ️</span> Company
             </h3>
             <ul className="space-y-2">
               {LEGAL.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 text-sm hover:text-accent transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  <Link href={link.href} className="footer-link">{link.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        {/* CTA strip */}
-        <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center gap-4 justify-between">
-          <p className="text-white/70 text-sm">Ready to book your journey?</p>
-          <div className="flex gap-3">
-            <a href={`tel:${PHONE}`} className="btn-primary text-sm px-5 py-2.5">
-              Call {PHONE}
-            </a>
-            <a
-              href={`https://wa.me/${WA}?text=Hi%2C%20I%20want%20to%20book%20a%20cab`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-whatsapp text-sm px-5 py-2.5"
-            >
-              WhatsApp Us
-            </a>
+        {/* ── CTA strip ───────────────────────────────────── */}
+        <div className="footer-cta-strip">
+          <div className="footer-cta-glow" aria-hidden="true" />
+          <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4 justify-between">
+            <div>
+              <p className="text-white font-serif font-bold text-lg leading-tight">
+                Ready to begin your sacred journey?
+              </p>
+              <p className="text-white/60 text-sm mt-0.5">
+                Book now — pilgrims trust us for every mile.
+              </p>
+            </div>
+            <div className="flex gap-3 flex-shrink-0">
+              <a href={`tel:${PHONE}`} className="btn-primary text-sm px-5 py-2.5">
+                📞 Call {PHONE}
+              </a>
+              <a href={`https://wa.me/${WA}?text=Hi%2C%20I%20want%20to%20book%20a%20cab`}
+                target="_blank" rel="noopener noreferrer"
+                className="btn-whatsapp text-sm px-5 py-2.5">
+                💬 WhatsApp Us
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/10 py-4">
-        <div className="container-site flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50">
+      {/* ── Animated car road ───────────────────────────── */}
+      <div className="footer-road-section relative z-10" aria-hidden="true">
+        <div className="footer-road">
+          <div className="footer-road-dashes" />
+          <span className="footer-road-car">🚗</span>
+          {/* Scenery dots */}
+          <span className="footer-scenery-item" style={{ left: '5%' }}>🛕</span>
+          <span className="footer-scenery-item" style={{ left: '20%' }}>🌴</span>
+          <span className="footer-scenery-item" style={{ left: '40%' }}>⛩️</span>
+          <span className="footer-scenery-item" style={{ left: '60%' }}>🌴</span>
+          <span className="footer-scenery-item" style={{ left: '75%' }}>🕌</span>
+          <span className="footer-scenery-item" style={{ left: '90%' }}>🛕</span>
+        </div>
+      </div>
+
+      {/* ── Bottom bar ──────────────────────────────────── */}
+      <div className="border-t border-white/10 py-4 relative z-10">
+        <div className="container-site flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
           <p>© {year} Tirupati Travel. All rights reserved.</p>
-          <p>Made with ❤ for pilgrims of Kashi</p>
+          <div className="flex items-center gap-2">
+            <span>Made with</span>
+            <span className="text-primary animate-flame-pulse">❤️</span>
+            <span>for pilgrims of Kashi</span>
+          </div>
         </div>
       </div>
     </footer>

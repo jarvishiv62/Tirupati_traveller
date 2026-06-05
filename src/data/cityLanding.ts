@@ -11,7 +11,7 @@ export const varanasi: CityLandingData = {
   city: 'Varanasi',
   aliases: ['Kashi', 'Banaras'],
   heroText: 'Taxi & Tour Services in the Spiritual Capital of India',
-  heroImage: '/Images/cities/varanasi-hero.webp',
+  heroImage: '/assets/images/varanasi-tour-package.jpg',
   services: [
     { label: 'Outstation Taxi',   icon: '/svg/icons/taxi.svg',    slug: 'varanasi/one-way-cab-in-varanasi' },
     { label: 'Ganga Boat Rides',  icon: '/svg/icons/boat.svg',    slug: 'varanasi/varanasi-local-sightseeing-cab' },
@@ -52,7 +52,7 @@ export const varanasiPlaces: CityLandingData = {
   city: 'Varanasi',
   aliases: ['Kashi', 'Banaras'],
   heroText: 'Explore the Sacred Ghats, Temples & Heritage of Kashi',
-  heroImage: '/Images/cities/varanasi-ghats.webp',
+  heroImage:  '/assets/images/varanasi-tour-package.jpg',
   services: [
     { label: 'Ghat Tour Cab',    icon: '/svg/icons/boat.svg',    slug: 'varanasi/varanasi-local-sightseeing-cab' },
     { label: 'Temple Darshan',   icon: '/svg/icons/darshan.svg', slug: 'varanasi/varanasi-tour-packages' },
@@ -89,7 +89,7 @@ export const ayodhya: CityLandingData = {
   city: 'Ayodhya',
   aliases: ['Ram Nagri', 'Saket'],
   heroText: 'Taxi & Darshan Services in the Holy City of Lord Ram',
-  heroImage: '/Images/cities/ayodhya-hero.webp',
+  heroImage:  '/assets/images/Ayodhya/ram_janm.jpeg',
   services: [
     { label: 'Outstation Taxi',  icon: '/svg/icons/taxi.svg',    slug: 'ayodhya/one-way-cab-in-ayodhya' },
     { label: 'Temple Darshan',   icon: '/svg/icons/darshan.svg', slug: 'ayodhya/ayodhya-tour-packages' },
@@ -128,7 +128,7 @@ export const ayodhyaDham: CityLandingData = {
   city: 'Ayodhya',
   aliases: ['Ram Nagri', 'Saket'],
   heroText: 'Complete Ayodhya Dham Darshan — Ram Mandir to Saryu Ghat',
-  heroImage: '/Images/cities/ayodhya-dham.webp',
+  heroImage: '/assets/images/Ayodhya/ram_janm.jpeg',
   services: [
     { label: 'Dham Darshan Tour', icon: '/svg/icons/darshan.svg', slug: 'ayodhya/ayodhya-darshan-tour-package' },
     { label: 'Local Sightseeing', icon: '/svg/icons/boat.svg',    slug: 'ayodhya/ayodhya-local-sightseeing-cab' },
@@ -162,7 +162,7 @@ export const allahabad: CityLandingData = {
   city: 'Allahabad',
   aliases: ['Prayagraj', 'Sangam City'],
   heroText: 'Taxi & Tour Services at the Triveni Sangam',
-  heroImage: '/Images/cities/allahabad-hero.webp',
+  heroImage: '/assets/images/Allahabad_places/khusro.jpg',
   services: [
     { label: 'Outstation Taxi',  icon: '/svg/icons/taxi.svg',    slug: 'allahabad/one-way-cab-in-allahabad' },
     { label: 'Sangam Boat Tour', icon: '/svg/icons/boat.svg',    slug: 'allahabad/cab-service-in-allahabad' },
@@ -310,7 +310,7 @@ export const gaya: CityLandingData = {
   city: 'Gaya',
   aliases: ['Bodh Gaya', 'Pitru Tirth'],
   heroText: 'Taxi & Pilgrimage Services in the Land of Moksha',
-  heroImage: '/Images/cities/gaya-hero.webp',
+  heroImage: '/assets/images/Gaya_places/Gaya.jpeg',
   services: [
     { label: 'Outstation Taxi', icon: '/svg/icons/taxi.svg',    slug: 'gaya/gaya-to-varanasi-taxi' },
     { label: 'Pind Daan Tour',  icon: '/svg/icons/darshan.svg', slug: 'gaya/gaya-to-varanasi-taxi' },
@@ -386,7 +386,7 @@ export const vindhyachal: CityLandingData = {
   city: 'Vindhyachal',
   aliases: ['Vindhya Dham', 'Shakti Peeth'],
   heroText: 'Taxi & Darshan Services at the Sacred Vindhya Shakti Peeth',
-  heroImage: '/Images/cities/vindhyachal-hero.webp',
+  heroImage:  '/assets/images/vindhyachal/vindhyachal.png',
   services: [
     { label: 'Outstation Taxi',  icon: '/svg/icons/taxi.svg',    slug: 'vindhyachal/vindhyachal-to-varanasi-taxi' },
     { label: 'Devi Darshan',     icon: '/svg/icons/darshan.svg', slug: 'vindhyachal/vindhyachal-to-varanasi-taxi' },

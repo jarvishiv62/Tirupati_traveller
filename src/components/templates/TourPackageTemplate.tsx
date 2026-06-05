@@ -1,8 +1,8 @@
 // src/components/templates/TourPackageTemplate.tsx
 // TODO: CHUNK 7 — full template implementation
-import type { TourPackageData } from '@/data/tourPackages';
+import type { TourPackage } from '@/data/tourPackages';
 export default function TourPackageTemplate({ data }: { data: unknown }) {
-  const d = data as TourPackageData;
+  const d = data as TourPackage;
   return (
     <div className="min-h-screen bg-section-cream">
       <div className="container-site section-pad">
