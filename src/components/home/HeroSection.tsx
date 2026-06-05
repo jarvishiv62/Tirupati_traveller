@@ -169,17 +169,6 @@ Please share available options.`
         />
       </div>
 
-      {/* ── Ghat skyline bookend ──────────────────────────
-      <div className="ghat-skyline-wrap z-10 text-white/35" aria-hidden="true">
-        <Image
-          src="/svg/ghats/ghat-skyline.svg"
-          alt=""
-          width={1440}
-          height={120}
-          className="w-full h-auto"
-        />
-      </div> */}
-
       {/* ── Decorative om symbol ────────────────────────── */}
       <div
         className="om-decor absolute bottom-24 right-8 z-10 text-gold/10 font-serif select-none pointer-events-none"
@@ -204,7 +193,7 @@ Please share available options.`
             Varanasi&apos;s Most Trusted <br className="hidden sm:block" />
             <span className="relative inline-block">
               <span
-                className={`hero-rotating-word text-red-600 transition-all duration-350 ${visible
+                className={`hero-rotating-word text-[#DE9619] transition-all duration-350 ${visible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 -translate-y-3"
                   }`}

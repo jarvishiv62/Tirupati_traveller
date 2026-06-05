@@ -3,6 +3,7 @@
 import Accordion, { type AccordionItem } from '@/components/ui/Accordion';
 import SectionHeader from '@/components/shared/SectionHeader';
 import { faqs } from '@/data/faqs';
+import Link from 'next/link';
 
 export default function FAQSection() {
   const accordionItems: AccordionItem[] = faqs.map((faq) => ({
@@ -49,9 +50,9 @@ export default function FAQSection() {
             Call us at 87261 24680
           </a>{' '}
           or{' '}
-          <a href="/contact-us" className="text-primary font-medium hover:underline">
+          <link href="/contact-us" className="text-primary font-medium hover:underline">
             send us a message
-          </a>
+          </link>
           .
         </p>
       </div>

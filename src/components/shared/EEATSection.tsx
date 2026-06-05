@@ -83,7 +83,9 @@ function FounderBlock() {
       </div>
 
       <div className="eeat-founder-content">
-        <div className="eeat-founder-quote-mark" aria-hidden="true">"</div>
+        <div className="eeat-founder-quote-mark" aria-hidden="true">
+          &quot;
+        </div>
         <blockquote className="eeat-founder-quote">
           For the last 12 years, our mission has been making pilgrimage travel{' '}
           <em>simple, safe and reliable</em> — so every pilgrim reaches their sacred

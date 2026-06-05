@@ -1,6 +1,7 @@
 import TempleArchCard from '@/components/shared/TempleArchCard';
 import SectionHeader from '@/components/shared/SectionHeader';
 import { tourPackages } from '@/data/tourPackages';
+import Link from 'next/link';
 
 export default function TourPackageCards() {
   // Show max 4 on homepage
@@ -47,9 +48,9 @@ export default function TourPackageCards() {
         </div>
 
         <div className="text-center mt-10">
-          <a href="/varanasi/varanasi-tour-packages" className="btn-outline px-8 py-3">
+          <Link href="/varanasi/varanasi-tour-packages" className="btn-outline px-8 py-3">
             View All Tour Packages
-          </a>
+          </Link>
         </div>
       </div>
     </section>

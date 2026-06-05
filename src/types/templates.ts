@@ -117,15 +117,15 @@ export type VehicleData = {
 
 export type CabServiceData = {
   serviceType:
-    | 'one-way'
-    | 'round-trip'
-    | 'full-day'
-    | 'half-day'
-    | 'outstation'
-    | 'drop'
-    | 'call-taxi'
-    | 'tourist'
-    | 'corporate';
+  | 'one-way'
+  | 'round-trip'
+  | 'full-day'
+  | 'half-day'
+  | 'outstation'
+  | 'drop'
+  | 'call-taxi'
+  | 'tourist'
+  | 'corporate';
   city: string;
   pricing: { sedan: number; innova: number; ertiga: number };
   inclusions: string[];

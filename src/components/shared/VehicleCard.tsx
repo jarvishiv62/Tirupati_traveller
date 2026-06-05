@@ -1,152 +1,203 @@
 // src/components/shared/VehicleCard.tsx
-// Arch-top vehicle card — used in CityLandingTemplate VehiclePricingCards section
-// Server Component — no 'use client' needed
+// Full vehicle pricing card — used in CabServiceTemplate, LocalServiceTemplate,
+// CityLandingTemplate, and VehicleTemplate's RelatedVehicles section.
+// Server Component — no 'use client' needed.
 
 import Image from 'next/image';
-import Link from 'next/link';
-import { Users, Briefcase, Zap, Phone } from 'lucide-react';
+import { Users, Briefcase, Fuel, Star } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { buildWALink, formatPrice } from '@/lib/utils';
 
-export type VehicleCardData = {
+export interface VehicleCardData {
   id: string;
   name: string;
   image: string;
-  category: 'sedan' | 'suv' | 'tempo' | 'luxury';
-  tariff: number;         // ₹/km
-  perDayKm: number;
-  driverCharge: number;   // ₹/day
+  category: 'sedan' | 'suv' | 'premium-suv' | 'tempo' | 'luxury-van';
+  tariff: number;        // ₹/km
+  perDayKm: number;      // km included per day
+  driverCharge: number;  // ₹/day
   seats: number;
   luggage: number;
   ac: boolean;
-  badge?: string;         // e.g. 'Most Popular'
-  slug: string;           // e.g. 'varanasi/innova-crysta-on-rent-in-varanasi'
-};
+  features: string[];
+  badge: string | null;
+}
 
-type Props = {
+interface VehicleCardProps {
   vehicle: VehicleCardData;
-  city?: string;
-  compact?: boolean;
+  city: string;           // e.g. 'Varanasi' — used for WhatsApp pre-fill
+  citySlug: string;       // e.g. 'varanasi' — used for href
+  compact?: boolean;      // horizontal layout for lists
   className?: string;
-};
+  showCTA?: boolean;      // show Call + WhatsApp buttons (default: true)
+}
 
-const CATEGORY_COLORS: Record<string, string> = {
-  sedan:  'bg-primary-light text-primary-dark',
-  suv:    'bg-secondary text-white',
-  tempo:  'bg-accent-light text-secondary',
-  luxury: 'bg-gold-pale text-gold-deep',
-};
-
-export default function VehicleCard({ vehicle, city = 'Varanasi', compact = false, className = '' }: Props) {
-  const waMessage = encodeURIComponent(
-    `Hi, I want to book ${vehicle.name} in ${city}. Please share availability and pricing.`
+export default function VehicleCard({
+  vehicle,
+  city,
+  citySlug,
+  compact = false,
+  className,
+  showCTA = true,
+}: VehicleCardProps) {
+  const waMessage = buildWALink(
+    `Hi, I want to book a ${vehicle.name} in ${city}. Please share availability and fare details.`,
   );
-  const waLink = `https://wa.me/918726124680?text=${waMessage}`;
 
-  return (
-    <article
-      className={`card-temple group relative flex flex-col overflow-hidden bg-white transition-shadow duration-300 hover:shadow-temple ${className}`}
-    >
-      {/* Badge */}
-      {vehicle.badge && (
-        <span className="absolute top-3 left-3 z-10 badge-gold text-xs font-semibold px-2.5 py-1 rounded-full shadow-gold">
-          {vehicle.badge}
-        </span>
-      )}
-
-      {/* Category tag */}
-      <span
-        className={`absolute top-3 right-3 z-10 text-xs font-medium px-2.5 py-1 rounded-full capitalize ${CATEGORY_COLORS[vehicle.category] || CATEGORY_COLORS.sedan}`}
+  if (compact) {
+    // ── Compact / horizontal layout ──────────────────────────────────────────
+    return (
+      <div
+        className={cn(
+          'card-warm rounded-2xl p-4 flex gap-4 items-start hover:shadow-temple transition-shadow duration-300',
+          className,
+        )}
       >
-        {vehicle.category}
-      </span>
+        {/* Vehicle image */}
+        <div className="relative w-24 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-cream-dark">
+          <Image
+            src={vehicle.image}
+            alt={`${vehicle.name} cab in ${city}`}
+            fill
+            className="object-cover"
+            sizes="96px"
+          />
+        </div>
 
-      {/* Vehicle image — arch-frame clip */}
-      <div className={`arch-frame relative w-full overflow-hidden bg-cream-dark ${compact ? 'h-36' : 'h-48'}`}>
+        {/* Info */}
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-2">
+            <div>
+              {vehicle.badge && (
+                <span className="inline-block bg-gold text-secondary text-xs font-semibold px-2 py-0.5 rounded-full mb-1">
+                  {vehicle.badge}
+                </span>
+              )}
+              <h3 className="font-sans font-semibold text-text-primary text-sm leading-tight">
+                {vehicle.name}
+              </h3>
+            </div>
+            <div className="text-right flex-shrink-0">
+              <div className="text-primary font-bold text-base font-serif leading-none">
+                ₹{vehicle.tariff}/km
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 mt-1.5 text-text-light text-xs">
+            <span className="flex items-center gap-1">
+              <Users size={12} />
+              {vehicle.seats} seats
+            </span>
+            <span className="flex items-center gap-1">
+              <Briefcase size={12} />
+              {vehicle.luggage} bags
+            </span>
+            {vehicle.ac && (
+              <span className="text-primary font-medium">AC</span>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Full card layout ────────────────────────────────────────────────────────
+  return (
+    <div
+      className={cn(
+        'card-warm rounded-2xl overflow-hidden hover:shadow-temple transition-shadow duration-300 flex flex-col',
+        className,
+      )}
+    >
+      {/* Vehicle image */}
+      <div className="relative h-44 bg-cream-dark flex-shrink-0">
         <Image
           src={vehicle.image}
           alt={`${vehicle.name} cab in ${city}`}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
-        {/* gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+        {/* Badge */}
+        {vehicle.badge && (
+          <div className="absolute top-3 left-3">
+            <span className="bg-gold text-secondary text-xs font-bold px-2.5 py-1 rounded-full shadow">
+              {vehicle.badge}
+            </span>
+          </div>
+        )}
+        {/* Price overlay */}
+        <div className="absolute bottom-0 right-0 bg-secondary/90 text-white px-3 py-1.5 rounded-tl-xl">
+          <span className="text-xs text-white/70">Starting</span>
+          <div className="font-bold text-base font-serif leading-tight">
+            ₹{vehicle.tariff}/km
+          </div>
+        </div>
       </div>
 
-      {/* Content */}
-      <div className="flex flex-col flex-1 p-4 gap-3">
+      {/* Card body */}
+      <div className="p-4 flex flex-col flex-1">
         {/* Name */}
-        <h3 className="font-serif text-lg font-bold text-secondary leading-tight group-hover:text-primary transition-colors duration-200">
+        <h3 className="font-serif font-bold text-text-primary text-lg leading-tight mb-3">
           {vehicle.name}
         </h3>
 
-        {/* Specs row */}
-        <div className="flex flex-wrap gap-3 text-xs text-text-secondary">
-          <span className="flex items-center gap-1">
-            <Users size={13} className="text-primary" />
-            {vehicle.seats} Seats
-          </span>
-          <span className="flex items-center gap-1">
-            <Briefcase size={13} className="text-primary" />
-            {vehicle.luggage} Bags
-          </span>
-          {vehicle.ac && (
-            <span className="flex items-center gap-1">
-              <Zap size={13} className="text-primary" />
-              AC
-            </span>
-          )}
+        {/* Specs grid */}
+        <div className="grid grid-cols-2 gap-2 mb-3">
+          {[
+            { icon: Users, label: `${vehicle.seats} Seats` },
+            { icon: Briefcase, label: `${vehicle.luggage} Bags` },
+            { icon: Fuel, label: vehicle.ac ? 'AC' : 'Non-AC' },
+            { icon: Star, label: `₹${vehicle.driverCharge}/day driver` },
+          ].map(({ icon: Icon, label }) => (
+            <div
+              key={label}
+              className="flex items-center gap-1.5 text-text-secondary text-xs"
+            >
+              <Icon size={13} className="text-primary flex-shrink-0" />
+              <span>{label}</span>
+            </div>
+          ))}
         </div>
 
-        {/* Pricing */}
-        <div className="card-warm rounded-xl p-3 flex items-center justify-between">
-          <div>
-            <p className="text-xs text-text-secondary">Starting at</p>
-            <p className="text-xl font-bold text-primary">
-              ₹{vehicle.tariff.toFixed(2)}
-              <span className="text-xs font-normal text-text-secondary">/km</span>
-            </p>
-          </div>
-          <div className="text-right">
-            <p className="text-xs text-text-secondary">Driver charge</p>
-            <p className="text-sm font-semibold text-secondary">₹{vehicle.driverCharge}/day</p>
-          </div>
-        </div>
-
-        {/* Info note */}
-        <p className="text-xs text-text-light">
-          Includes {vehicle.perDayKm} km/day · Tolls extra
+        {/* Per-day KM note */}
+        <p className="text-xs text-text-light mb-3">
+          Includes {vehicle.perDayKm} km/day &bull; Extra km billed at tariff rate
         </p>
 
-        {/* Actions */}
-        {!compact && (
-          <div className="mt-auto flex gap-2 pt-1">
+        {/* Features */}
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {vehicle.features.slice(0, 4).map((feat) => (
+            <span
+              key={feat}
+              className="bg-cream text-text-secondary text-xs px-2 py-0.5 rounded-full border border-border-warm"
+            >
+              {feat}
+            </span>
+          ))}
+        </div>
+
+        {/* CTAs — pushed to bottom */}
+        {showCTA && (
+          <div className="mt-auto flex flex-col gap-2">
             <a
-              href={waLink}
+              href={`tel:8726124680`}
+              className="btn-primary text-sm py-2.5 text-center w-full"
+            >
+              Call to Book
+            </a>
+            <a
+              href={waMessage}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp flex-1 text-center text-sm py-2.5 rounded-full font-medium"
+              className="btn-whatsapp text-sm py-2.5 text-center w-full"
             >
               WhatsApp
             </a>
-            <Link
-              href={`/${vehicle.slug}`}
-              className="btn-outline flex-1 text-center text-sm py-2.5 rounded-full font-medium"
-            >
-              View Details
-            </Link>
           </div>
         )}
-
-        {compact && (
-          <a
-            href={`tel:+918726124680`}
-            className="btn-primary w-full text-center text-sm py-2 rounded-full font-medium flex items-center justify-center gap-1.5 mt-auto"
-          >
-            <Phone size={13} />
-            Book Now
-          </a>
-        )}
       </div>
-    </article>
+    </div>
   );
 }

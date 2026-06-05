@@ -203,6 +203,7 @@ function VehiclePricingCards({
 }) {
     // Pull vehicle data from vehicles.ts using the IDs
     const cityKey = city.toLowerCase();
+    const citySlug = cityKey; // reuse slug for VehicleCard
     const allVehicles = (vehiclesData as any).getVehiclesByCity
         ? (vehiclesData as any).getVehiclesByCity(cityKey)
         : [];
@@ -224,7 +225,7 @@ function VehiclePricingCards({
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                     {vehicles.map((vehicle: any) => (
-                        <VehicleCard key={vehicle.id} vehicle={vehicle} city={city} />
+                        <VehicleCard key={vehicle.id} vehicle={vehicle} city={city} citySlug={citySlug} />
                     ))}
                 </div>
 
