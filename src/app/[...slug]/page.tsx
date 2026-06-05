@@ -11,13 +11,13 @@ import LayoutShell from '@/components/shared/LayoutShell';
 // ── TEMPLATE IMPORTS ──────────────────────────────────────────────────────
 //import OutstationRouteTemplate from '@/components/templates/OutstationRouteTemplate';
 //import AirportTaxiTemplate from '@/components/templates/AirportTaxiTemplate';
-//import VehicleTemplate from '@/components/templates/VehicleTemplate';
-//import CabServiceTemplate from '@/components/templates/CabServiceTemplate';
-//import LocalServiceTemplate from '@/components/templates/LocalServiceTemplate';
+import VehicleTemplate from '@/components/templates/VehicleTemplate';
+import CabServiceTemplate from '@/components/templates/CabServiceTemplate';
+import LocalServiceTemplate from '@/components/templates/LocalServiceTemplate';
 import CityLandingTemplate from '@/components/templates/CityLandingTemplate';
-//import TourPackageTemplate from '@/components/templates/TourPackageTemplate';
-//import TempoTravellerTemplate from '@/components/templates/TempoTravellerTemplate';
-//import CarRentalTemplate from '@/components/templates/CarRentalTemplate';
+import TourPackageTemplate from '@/components/templates/TourPackageTemplate';
+import TempoTravellerTemplate from '@/components/templates/TempoTravellerTemplate';
+import CarRentalTemplate from '@/components/templates/CarRentalTemplate';
 import PlacesToVisitTemplate from '@/components/templates/PlacesToVisitTemplate';
 //import AccommodationTemplate from '@/components/templates/AccommodationTemplate';
 //import StaticPageTemplate from '@/components/templates/StaticPageTemplate';
@@ -28,13 +28,13 @@ import PlacesToVisitTemplate from '@/components/templates/PlacesToVisitTemplate'
 const TEMPLATE_MAP: Record<string, React.ComponentType<{ data: any }>> = {
   //OutstationRouteTemplate,
   //AirportTaxiTemplate,
-  //VehicleTemplate,
-  //CabServiceTemplate,
-  //LocalServiceTemplate,
+  VehicleTemplate,
+  CabServiceTemplate,
+  LocalServiceTemplate,
   CityLandingTemplate,
-  //TourPackageTemplate,
-  //TempoTravellerTemplate,
-  //CarRentalTemplate,
+  TourPackageTemplate,
+  TempoTravellerTemplate,
+  CarRentalTemplate,
   PlacesToVisitTemplate,
   //AccommodationTemplate,
   //StaticPageTemplate,

@@ -3,19 +3,19 @@
 // CityLandingTemplate, and VehicleTemplate's RelatedVehicles section.
 // Server Component — no 'use client' needed.
 
-import Image from 'next/image';
-import { Users, Briefcase, Fuel, Star } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { buildWALink, formatPrice } from '@/lib/utils';
+import Image from "next/image";
+import { Users, Briefcase, Fuel, Star } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { buildWALink, formatPrice } from "@/lib/utils";
 
 export interface VehicleCardData {
   id: string;
   name: string;
   image: string;
-  category: 'sedan' | 'suv' | 'premium-suv' | 'tempo' | 'luxury-van';
-  tariff: number;        // ₹/km
-  perDayKm: number;      // km included per day
-  driverCharge: number;  // ₹/day
+  category: "sedan" | "suv" | "premium-suv" | "tempo" | "luxury-van";
+  tariff: number; // ₹/km
+  perDayKm: number; // km included per day
+  driverCharge: number; // ₹/day
   seats: number;
   luggage: number;
   ac: boolean;
@@ -25,11 +25,11 @@ export interface VehicleCardData {
 
 interface VehicleCardProps {
   vehicle: VehicleCardData;
-  city: string;           // e.g. 'Varanasi' — used for WhatsApp pre-fill
-  citySlug: string;       // e.g. 'varanasi' — used for href
-  compact?: boolean;      // horizontal layout for lists
+  city: string; // e.g. 'Varanasi' — used for WhatsApp pre-fill
+  citySlug: string; // e.g. 'varanasi' — used for href
+  compact?: boolean; // horizontal layout for lists
   className?: string;
-  showCTA?: boolean;      // show Call + WhatsApp buttons (default: true)
+  showCTA?: boolean; // show Call + WhatsApp buttons (default: true)
 }
 
 export default function VehicleCard({
@@ -49,7 +49,7 @@ export default function VehicleCard({
     return (
       <div
         className={cn(
-          'card-warm rounded-2xl p-4 flex gap-4 items-start hover:shadow-temple transition-shadow duration-300',
+          "card-warm rounded-2xl p-4 flex gap-4 items-start hover:shadow-temple transition-shadow duration-300",
           className,
         )}
       >
@@ -93,9 +93,7 @@ export default function VehicleCard({
               <Briefcase size={12} />
               {vehicle.luggage} bags
             </span>
-            {vehicle.ac && (
-              <span className="text-primary font-medium">AC</span>
-            )}
+            {vehicle.ac && <span className="text-primary font-medium">AC</span>}
           </div>
         </div>
       </div>
@@ -106,7 +104,7 @@ export default function VehicleCard({
   return (
     <div
       className={cn(
-        'card-warm rounded-2xl overflow-hidden hover:shadow-temple transition-shadow duration-300 flex flex-col',
+        "card-warm rounded-2xl overflow-hidden hover:shadow-temple transition-shadow duration-300 flex flex-col",
         className,
       )}
     >
@@ -148,7 +146,7 @@ export default function VehicleCard({
           {[
             { icon: Users, label: `${vehicle.seats} Seats` },
             { icon: Briefcase, label: `${vehicle.luggage} Bags` },
-            { icon: Fuel, label: vehicle.ac ? 'AC' : 'Non-AC' },
+            { icon: Fuel, label: vehicle.ac ? "AC" : "Non-AC" },
             { icon: Star, label: `₹${vehicle.driverCharge}/day driver` },
           ].map(({ icon: Icon, label }) => (
             <div
@@ -163,7 +161,8 @@ export default function VehicleCard({
 
         {/* Per-day KM note */}
         <p className="text-xs text-text-light mb-3">
-          Includes {vehicle.perDayKm} km/day &bull; Extra km billed at tariff rate
+          Includes {vehicle.perDayKm} km/day &bull; Extra km billed at tariff
+          rate
         </p>
 
         {/* Features */}

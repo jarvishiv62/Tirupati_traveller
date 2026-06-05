@@ -50,9 +50,9 @@ export default function FAQSection() {
             Call us at 87261 24680
           </a>{' '}
           or{' '}
-          <link href="/contact-us" className="text-primary font-medium hover:underline">
+          <Link href="/contact-us" className="text-primary font-medium hover:underline">
             send us a message
-          </link>
+          </Link>
           .
         </p>
       </div>

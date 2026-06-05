@@ -3,23 +3,23 @@
 // Used in CabServiceTemplate and LocalServiceTemplate.
 // Server Component.
 
-import { CheckCircle } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { buildWALink } from '@/lib/utils';
+import { CheckCircle } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { buildWALink } from "@/lib/utils";
 
 export interface PricingRow {
-  vehicle: string;       // e.g. 'Swift Dzire'
-  category: string;      // e.g. 'Sedan (4 seats)'
-  price: number;         // base/starting price
-  priceLabel?: string;   // override label e.g. '₹2,500 / 12 hrs'
-  features: string[];    // short feature tags e.g. ['AC', 'GPS']
+  vehicle: string; // e.g. 'Swift Dzire'
+  category: string; // e.g. 'Sedan (4 seats)'
+  price: number; // base/starting price
+  priceLabel?: string; // override label e.g. '₹2,500 / 12 hrs'
+  features: string[]; // short feature tags e.g. ['AC', 'GPS']
 }
 
 interface PricingTableProps {
   rows: PricingRow[];
-  serviceLabel: string;  // e.g. 'Full Day Taxi'
-  city: string;          // e.g. 'Varanasi'
-  note?: string;         // optional footnote
+  serviceLabel: string; // e.g. 'Full Day Taxi'
+  city: string; // e.g. 'Varanasi'
+  note?: string; // optional footnote
   className?: string;
 }
 
@@ -31,7 +31,7 @@ export default function PricingTable({
   className,
 }: PricingTableProps) {
   return (
-    <div className={cn('card-warm rounded-2xl overflow-hidden', className)}>
+    <div className={cn("card-warm rounded-2xl overflow-hidden", className)}>
       {/* Table header */}
       <div className="bg-secondary px-5 py-3 flex items-center justify-between">
         <h3 className="font-serif font-bold text-white text-base">
@@ -63,8 +63,8 @@ export default function PricingTable({
             <div
               key={row.vehicle}
               className={cn(
-                'grid grid-cols-3 items-center px-5 py-4 gap-2',
-                idx % 2 === 0 ? 'bg-white' : 'bg-cream/40',
+                "grid grid-cols-3 items-center px-5 py-4 gap-2",
+                idx % 2 === 0 ? "bg-white" : "bg-cream/40",
               )}
             >
               {/* Vehicle name + features */}
@@ -91,7 +91,7 @@ export default function PricingTable({
               {/* Price */}
               <div className="text-center">
                 <div className="font-bold text-primary font-serif text-lg leading-none">
-                  ₹{row.price.toLocaleString('en-IN')}
+                  ₹{row.price.toLocaleString("en-IN")}
                 </div>
                 {row.priceLabel && (
                   <div className="text-text-light text-xs mt-0.5">
