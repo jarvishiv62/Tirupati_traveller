@@ -8,24 +8,62 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary:   { DEFAULT: '#FF6B00', dark: '#E65100', light: '#FFF3E0' },
-        secondary: { DEFAULT: '#1A237E', light: '#3949AB' },
-        accent:    { DEFAULT: '#FFD600', dark: '#F9A825', light: '#FFFDE7' },
-        cream: { DEFAULT: '#FDF8F0', dark: '#F5EDD8', warm: '#FAF0E0' },
-        saffron: { DEFAULT: '#FF6B00', pale: '#FFF3E0' },
-        gold:    { DEFAULT: '#FFD600', deep: '#C49A00', pale: '#FFFDE7' },
-        sandstone: '#C4A882',
-        temple: { stone: '#8D7B68', dark: '#4A3728' },
-        surface:   { DEFAULT: '#FFFFFF', alt: '#F8F9FA', cream: '#FDF8F0' },
-        text: {
-          primary:   '#212121',
-          secondary: '#616161',
-          light:     '#9E9E9E',
-          cream:     '#5C4A32',
+        /* ── Primary — Gold ───────────────────────────── */
+        primary: {
+          DEFAULT: '#DE9619',
+          dark:    '#B87A10',
+          light:   '#FDF3E0',
+          pale:    '#FEF9F0',
+          deep:    '#8A5C0C',
         },
-        success: '#2E7D32',
-        border: '#E0E0E0',
-        'border-warm': '#E8DDD0',
+        /* ── Secondary — Black / Charcoal ─────────────── */
+        secondary: {
+          DEFAULT: '#1A1A1A',
+          light:   '#2C2C2C',
+          mid:     '#4A4A4A',
+        },
+        /* ── Accent — Light Gold ──────────────────────── */
+        accent: {
+          DEFAULT: '#F0B84A',
+          dark:    '#DE9619',
+          light:   '#FDF3E0',
+        },
+        /* ── Gold alias (used across shimmer / dividers) ─ */
+        gold: {
+          DEFAULT: '#DE9619',
+          light:   '#F0B84A',
+          pale:    '#FDF3E0',
+          deep:    '#8A5C0C',
+        },
+        /* ── Neutral whites / off-whites ──────────────── */
+        cream: {
+          DEFAULT: '#FAFAFA',
+          dark:    '#F0F0F0',
+          warm:    '#F5F5F5',
+        },
+        /* ── Grays (replaces sandstone / temple tones) ── */
+        sandstone: '#9A9A9A',
+        temple: {
+          stone: '#6B6B6B',
+          dark:  '#2C2C2C',
+        },
+        /* ── Surfaces ─────────────────────────────────── */
+        surface: {
+          DEFAULT: '#FFFFFF',
+          alt:     '#FAFAFA',
+          cream:   '#F5F5F5',
+        },
+        /* ── Text ─────────────────────────────────────── */
+        text: {
+          primary:   '#0A0A0A',
+          secondary: '#4A4A4A',
+          light:     '#9A9A9A',
+          cream:     '#2C2C2C',
+        },
+        /* ── Utility ──────────────────────────────────── */
+        success:       '#2E7D32',
+        border:        '#E0E0E0',
+        'border-warm': '#D4D4D4',
       },
 
       fontFamily: {
@@ -34,13 +72,13 @@ module.exports = {
       },
 
       boxShadow: {
-        card:        '0 4px 20px rgba(0,0,0,0.08)',
-        'card-hover':'0 12px 40px rgba(0,0,0,0.14)',
-        'card-warm': '0 4px 20px rgba(196,168,130,0.20)',
-        temple:      '0 8px 32px rgba(255,107,0,0.15), 0 2px 8px rgba(0,0,0,0.08)',
-        gold:        '0 4px 20px rgba(255,214,0,0.30)',
-        float:       '0 4px 16px rgba(255,107,0,0.35)',
-        'navbar-scroll': '0 4px 24px rgba(255,107,0,0.12)',
+        card:              '0 4px 20px rgba(0,0,0,0.07)',
+        'card-hover':      '0 12px 40px rgba(0,0,0,0.13)',
+        'card-warm':       '0 4px 20px rgba(0,0,0,0.06)',
+        temple:            '0 8px 32px rgba(222,150,25,0.18), 0 2px 8px rgba(0,0,0,0.08)',
+        gold:              '0 4px 20px rgba(222,150,25,0.35)',
+        float:             '0 4px 16px rgba(222,150,25,0.40)',
+        'navbar-scroll':   '0 4px 24px rgba(0,0,0,0.12)',
       },
 
       borderRadius: {
@@ -67,7 +105,6 @@ module.exports = {
       },
 
       keyframes: {
-        /* existing */
         flamePulse: {
           '0%, 100%': { transform: 'scale(1)', opacity: '1' },
           '50%':      { transform: 'scale(1.12)', opacity: '0.85' },
@@ -80,7 +117,6 @@ module.exports = {
           '0%':   { opacity: '0', transform: 'translateY(24px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        /* new */
         mandalaPulse: {
           '0%, 100%': { opacity: '0.06', transform: 'rotate(0deg) scale(1)' },
           '50%':      { opacity: '0.09', transform: 'rotate(180deg) scale(1.04)' },
@@ -106,8 +142,8 @@ module.exports = {
           '50%':      { opacity: '0.055', transform: 'translateY(-50%) scale(1.05)' },
         },
         btnPulse: {
-          '0%, 100%': { boxShadow: '0 4px 16px rgba(255,107,0,0.35)' },
-          '50%':      { boxShadow: '0 4px 32px rgba(255,107,0,0.65), 0 0 0 6px rgba(255,107,0,0.12)' },
+          '0%, 100%': { boxShadow: '0 4px 16px rgba(222,150,25,0.35)' },
+          '50%':      { boxShadow: '0 4px 32px rgba(222,150,25,0.65), 0 0 0 6px rgba(222,150,25,0.12)' },
         },
         rippleExpand: {
           '0%':   { transform: 'scale(0.7)', opacity: '0.8' },
@@ -120,9 +156,9 @@ module.exports = {
       },
 
       backgroundImage: {
-        'gradient-hero':   'linear-gradient(135deg, rgba(26,35,126,0.85) 0%, rgba(255,107,0,0.65) 100%)',
-        'gradient-sacred': 'linear-gradient(135deg, #1A237E 0%, #E65100 100%)',
-        'gradient-gold':   'linear-gradient(90deg, #F9A825, #FFD600, #F9A825)',
+        'gradient-hero':   'linear-gradient(135deg, rgba(26,26,26,0.88) 0%, rgba(222,150,25,0.60) 100%)',
+        'gradient-sacred': 'linear-gradient(135deg, #1A1A1A 0%, #B87A10 100%)',
+        'gradient-gold':   'linear-gradient(90deg, #B87A10, #DE9619, #F0B84A, #DE9619, #B87A10)',
       },
     },
   },
