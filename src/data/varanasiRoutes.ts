@@ -11,6 +11,7 @@ export type OutstationRouteData = {
     sedan: number;
     innova: number;
     ertiga: number;
+    crysta?: number;
     tempo?: number;
   };
   highlights: string[];
