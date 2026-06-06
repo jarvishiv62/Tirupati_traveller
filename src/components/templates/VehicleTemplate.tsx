@@ -72,7 +72,7 @@ function formatPrice(amount: number, perKm = false): string {
 
 function VehicleHero({ data }: { data: VehicleData }) {
   const { vehicleName, city, pricePerKm, basePrice, images, specs, slug } = data;
-  const heroImage = images[0] || `/Images/vehicles/${slug?.split('/').pop() || 'vehicle'}.webp`;
+  const heroImage = images[0] || `/Images/Fleet/${slug?.split('/').pop() || 'vehicle'}.webp`;
   const waMsg = buildWALink(`Hi, I want to book ${vehicleName} in ${city}. Please share availability and pricing.`);
 
   // Service JSON-LD
@@ -131,7 +131,7 @@ function VehicleHero({ data }: { data: VehicleData }) {
         style={{ opacity: 0.04 }}
         aria-hidden="true"
       >
-        <Image src="/svg/corner-mandala.svg" alt="" fill className="object-contain" />
+        <Image src="/svg/ghats/corner-mandala.svg" alt="" fill className="object-contain" />
       </div>
 
       {/* Ghat skyline bottom bookend */}
@@ -477,7 +477,7 @@ function BookingCTABanner({ data }: { data: VehicleData }) {
         style={{ opacity: 0.08 }}
         aria-hidden="true"
       >
-        <Image src="/svg/corner-mandala.svg" alt="" fill className="object-contain" />
+        <Image src="/svg/ghats/corner-mandala.svg" alt="" fill className="object-contain" />
       </div>
 
       <div className="relative container-site">

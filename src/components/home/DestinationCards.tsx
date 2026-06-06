@@ -1,79 +1,122 @@
-import TempleArchCard from '@/components/shared/TempleArchCard';
-import SectionHeader from '@/components/shared/SectionHeader';
+// src/components/home/DestinationCards.tsx
+// Dark overlay destination cards — hover reveals dual CTA (Book Cab + Explore)
+// Server Component
 
+import ClientDestinationCard from "./ClientDestinationCard";
+
+/* ── Destination data with cab-booking URLs ──────────────────── */
 const DESTINATIONS = [
   {
-    city: 'Varanasi',
-    slug: '/varanasi',
-    image: '/assets/images/varanasi-tour-package.jpg',
-    alt: 'Dashashwamedh Ghat Varanasi',
-    badge: '12 Tours',
-    subtitle: 'Kashi · Banaras',
+    city: "Varanasi",
+    slug: "/varanasi",
+    cabSlug: "/varanasi/one-way-cab-in-varanasi",
+    image: "/assets/images/varanasi-tour-package.jpeg",
+    alt: "Dashashwamedh Ghat Varanasi at sunrise",
+    badge: "12 Tours",
+    subtitle: "Kashi · Banaras",
+    tagline: "Most Sacred City in India",
+    highlight: "68 routes covered",
+    icon: "🕌",
   },
   {
-    city: 'Allahabad',
-    slug: '/allahabad',
-    image: '/assets/images/Allahabad_places/khusro.jpg',
-    alt: 'Sangam Prayagraj Allahabad',
-    badge: '6 Tours',
-    subtitle: 'Prayagraj · Triveni Sangam',
+    city: "Ayodhya",
+    slug: "/ayodhya",
+    cabSlug: "/ayodhya/one-way-cab-in-ayodhya",
+    image: "/assets/images/Ayodhya/ram_janm.webp",
+    alt: "Ram Mandir Ayodhya",
+    badge: "5 Tours",
+    subtitle: "Ram Janmabhoomi",
+    tagline: "City of Lord Ram",
+    highlight: "200 km from Varanasi",
+    icon: "🛕",
   },
   {
-    city: 'Gaya',
-    slug: '/gaya',
-    image: '/assets/images/Gaya_places/Gaya.jpeg',
-    alt: 'Vishnupad Temple Gaya Bihar',
-    badge: '4 Tours',
-    subtitle: 'Bodh Gaya · Falgu River',
+    city: "Allahabad",
+    slug: "/allahabad",
+    cabSlug: "/allahabad/one-way-cab-in-allahabad",
+    image: "/assets/images/prayagraj/khusro.webp",
+    alt: "Sangam Prayagraj Allahabad",
+    badge: "6 Tours",
+    subtitle: "Prayagraj · Triveni Sangam",
+    tagline: "Kumbh Mela Capital",
+    highlight: "130 km from Varanasi",
+    icon: "🏛️",
   },
   {
-    city: 'Vindhyachal',
-    slug: '/vindhyachal',
-    image: '/assets/images/vindhyachal/vindhyachal.png',
-    alt: 'Vindhyachal Mandir Mirzapur',
-    badge: '3 Tours',
-    subtitle: 'Mirzapur · Shakti Peeth',
+    city: "Gaya",
+    slug: "/gaya",
+    cabSlug: "/gaya/varanasi-to-gaya-taxi",
+    image: "/assets/images/Gaya/Gaya.webp",
+    alt: "Vishnupad Temple Gaya Bihar",
+    badge: "4 Tours",
+    subtitle: "Bodh Gaya · Falgu River",
+    tagline: "Sacred Pitru Tarpan Site",
+    highlight: "250 km from Varanasi",
+    icon: "☸️",
   },
   {
-    city: 'Ayodhya',
-    slug: '/ayodhya',
-    image: '/assets/images/Ayodhya/ram_janm.jpeg',
-    alt: 'Ram Mandir Ayodhya',
-    badge: '5 Tours',
-    subtitle: 'Ram Janmabhoomi ',
+    city: "Vindhyachal",
+    slug: "/vindhyachal",
+    cabSlug: "/varanasi/varanasi-to-vindhyachal-taxi",
+    image: "/assets/images/vindhyachal/vindhyachal.webp",
+    alt: "Vindhyachal Mandir Mirzapur",
+    badge: "3 Tours",
+    subtitle: "Mirzapur · Shakti Peeth",
+    tagline: "Maa Vindhyavasini Dham",
+    highlight: "75 km from Varanasi",
+    icon: "⛰️",
   },
 ];
 
+/* ── Individual card ─────────────────────────────────────────── */
+
+/* ── Section ─────────────────────────────────────────────────── */
 export default function DestinationCards() {
   return (
     <section className="bg-section-cream texture-cream section-pad">
       <div className="container-site">
-        <SectionHeader
-          title="Explore Sacred Destinations"
-          subtitle="Journey to India's most revered pilgrimage sites with trusted local expertise"
-        />
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5">
-          {DESTINATIONS.map((dest) => (
-            <TempleArchCard
-              key={dest.city}
-              image={dest.image}
-              imageAlt={dest.alt}
-              title={dest.city}
-              subtitle={dest.subtitle}
-              badge={dest.badge}
-              badgeColor="primary"
-              imageHeight={220}
-              className="h-full"
-              footer={
-                <a
-                  href={dest.slug}
-                  className="btn-outline text-sm px-4 py-2 w-full text-center block"
-                >
-                  Explore {dest.city}
-                </a>
-              }
+        {/* Section header */}
+        <div className="text-center mb-12">
+          {/* Eyebrow */}
+          <div
+            className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full
+                          border border-primary/20 bg-primary/5"
+          >
+            <span
+              className="w-1.5 h-1.5 rounded-full bg-primary"
+              aria-hidden="true"
             />
+            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+              Sacred Destinations
+            </span>
+          </div>
+          <h2 className="section-title mb-3">Where Do You Want to Go?</h2>
+          <div className="divider-gold" />
+          <p className="section-sub mt-4 max-w-lg mx-auto">
+            Comfortable AC cabs to every pilgrimage site — book in 2 minutes,
+            travel with a trusted local expert
+          </p>
+        </div>
+
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4">
+          {DESTINATIONS.map((dest) => (
+            <ClientDestinationCard key={dest.city} {...dest} />
+          ))}
+        </div>
+
+        {/* Bottom trust strip */}
+        <div className="dest-trust-strip">
+          {[
+            { icon: "✅", text: "No advance payment" },
+            { icon: "📞", text: "Book in 2 minutes" },
+            { icon: "🚗", text: "AC cabs, all cities" },
+            { icon: "💯", text: "No hidden charges" },
+          ].map(({ icon, text }) => (
+            <div key={text} className="dest-trust-item">
+              <span aria-hidden="true">{icon}</span>
+              <span>{text}</span>
+            </div>
           ))}
         </div>
       </div>

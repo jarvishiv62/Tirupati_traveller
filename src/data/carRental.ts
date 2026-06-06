@@ -66,10 +66,10 @@ export const varanasi: CarRentalData = {
     { duration: '12 Hours', km: 120, price: 3500, vehicle: 'Innova Crysta', extraKmRate: 17 },
   ],
   availableVehicles: [
-    { id: 'swift-dzire',   name: 'Swift Dzire',    category: 'Sedan (4 seats)',       dailyRate: 1800,  weeklyRate: 11000, monthlyRate: 38000, image: '/assets/images/vehicles/swift-dzire.jpg' },
-    { id: 'toyota-etios',  name: 'Toyota Etios',   category: 'Sedan (4 seats)',       dailyRate: 1900,  weeklyRate: 12000, monthlyRate: 40000, image: '/assets/images/vehicles/toyota-etios.jpg' },
-    { id: 'ertiga',        name: 'Maruti Ertiga',  category: 'SUV (6 seats)',         dailyRate: 2500,  weeklyRate: 16000, monthlyRate: 55000, image: '/assets/images/vehicles/ertiga.jpg' },
-    { id: 'innova-crysta', name: 'Innova Crysta',  category: 'Premium SUV (7 seats)', dailyRate: 3200,  weeklyRate: 20000, monthlyRate: 70000, image: '/assets/images/vehicles/innova-crysta.jpg' },
+    { id: 'swift-dzire',   name: 'Swift Dzire',    category: 'Sedan (4 seats)',       dailyRate: 1800,  weeklyRate: 11000, monthlyRate: 38000, image: '/assets/images/Fleet/dzire.png' },
+    { id: 'toyota-etios',  name: 'Toyota Etios',   category: 'Sedan (4 seats)',       dailyRate: 1900,  weeklyRate: 12000, monthlyRate: 40000, image: '/assets/images/Fleet/etios.png' },
+    { id: 'ertiga',        name: 'Maruti Ertiga',  category: 'SUV (6 seats)',         dailyRate: 2500,  weeklyRate: 16000, monthlyRate: 55000, image: '/assets/images/Fleet/ertiga.jpg' },
+    { id: 'innova-crysta', name: 'Innova Crysta',  category: 'Premium SUV (7 seats)', dailyRate: 3200,  weeklyRate: 20000, monthlyRate: 70000, image: '/assets/images/Fleet/crysta.png' },
   ],
   inclusions: [
     'Professional driver with local Varanasi knowledge',
@@ -125,10 +125,10 @@ export const varanasiMonthly: CarRentalData = {
     { duration: '1 Month (26 days)', km: 2080, price: 70000, vehicle: 'Innova Crysta', extraKmRate: 15 },
   ],
   availableVehicles: [
-    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1800, weeklyRate: 11000, monthlyRate: 38000, image: '/assets/images/vehicles/swift-dzire.jpg' },
-    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1900, weeklyRate: 12000, monthlyRate: 42000, image: '/assets/images/vehicles/toyota-etios.jpg' },
-    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2500, weeklyRate: 16000, monthlyRate: 55000, image: '/assets/images/vehicles/ertiga.jpg' },
-    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 3200, weeklyRate: 20000, monthlyRate: 70000, image: '/assets/images/vehicles/innova-crysta.jpg' },
+    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1800, weeklyRate: 11000, monthlyRate: 38000, image: '/assets/images/Fleet/dzire.png' },
+    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1900, weeklyRate: 12000, monthlyRate: 42000, image: '/assets/images/Fleet/etios.png' },
+    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2500, weeklyRate: 16000, monthlyRate: 55000, image: '/assets/images/Fleet/ertiga.jpg' },
+    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 3200, weeklyRate: 20000, monthlyRate: 70000, image: '/assets/images/Fleet/crysta.png' },
   ],
   inclusions: [
     'Dedicated driver for the month',
@@ -183,10 +183,10 @@ export const ayodhya: CarRentalData = {
     { duration: '12 Hours', km: 120, price: 3200, vehicle: 'Innova Crysta', extraKmRate: 16 },
   ],
   availableVehicles: [
-    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1600, weeklyRate: 10000, monthlyRate: 35000, image: '/assets/images/vehicles/swift-dzire.jpg' },
-    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1700, weeklyRate: 11000, monthlyRate: 37000, image: '/assets/images/vehicles/toyota-etios.jpg' },
-    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2200, weeklyRate: 14000, monthlyRate: 50000, image: '/assets/images/vehicles/ertiga.jpg' },
-    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 2800, weeklyRate: 18000, monthlyRate: 62000, image: '/assets/images/vehicles/innova-crysta.jpg' },
+    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1600, weeklyRate: 10000, monthlyRate: 35000, image: '/assets/images/Fleet/dzire.png' },
+    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1700, weeklyRate: 11000, monthlyRate: 37000, image: '/assets/images/Fleet/etios.png' },
+    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2200, weeklyRate: 14000, monthlyRate: 50000, image: '/assets/images/Fleet/ertiga.jpg' },
+    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 2800, weeklyRate: 18000, monthlyRate: 62000, image: '/assets/images/Fleet/crysta.png' },
   ],
   inclusions: [
     'Professional driver with Ayodhya pilgrimage knowledge',
@@ -232,10 +232,10 @@ export const ayodhyaMonthly: CarRentalData = {
     { duration: '1 Month (26 days)', km: 2080, price: 62000, vehicle: 'Innova Crysta', extraKmRate: 14 },
   ],
   availableVehicles: [
-    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1600, weeklyRate: 10000, monthlyRate: 35000, image: '/assets/images/vehicles/swift-dzire.jpg' },
-    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1700, weeklyRate: 11000, monthlyRate: 37000, image: '/assets/images/vehicles/toyota-etios.jpg' },
-    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2200, weeklyRate: 14000, monthlyRate: 50000, image: '/assets/images/vehicles/ertiga.jpg' },
-    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 2800, weeklyRate: 18000, monthlyRate: 62000, image: '/assets/images/vehicles/innova-crysta.jpg' },
+    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1600, weeklyRate: 10000, monthlyRate: 35000, image: '/assets/images/Fleet/dzire.png' },
+    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1700, weeklyRate: 11000, monthlyRate: 37000, image: '/assets/images/Fleet/etios.png' },
+    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2200, weeklyRate: 14000, monthlyRate: 50000, image: '/assets/images/Fleet/ertiga.jpg' },
+    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 2800, weeklyRate: 18000, monthlyRate: 62000, image: '/assets/images/Fleet/crysta.png' },
   ],
   inclusions: [
     'Dedicated driver for the month',
@@ -280,10 +280,10 @@ export const allahabad: CarRentalData = {
     { duration: '12 Hours', km: 120, price: 3200, vehicle: 'Innova Crysta', extraKmRate: 16 },
   ],
   availableVehicles: [
-    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1600, weeklyRate: 10000, monthlyRate: 35000, image: '/assets/images/vehicles/swift-dzire.jpg' },
-    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1700, weeklyRate: 11000, monthlyRate: 37000, image: '/assets/images/vehicles/toyota-etios.jpg' },
-    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2200, weeklyRate: 14000, monthlyRate: 50000, image: '/assets/images/vehicles/ertiga.jpg' },
-    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 2800, weeklyRate: 18000, monthlyRate: 62000, image: '/assets/images/vehicles/innova-crysta.jpg' },
+    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1600, weeklyRate: 10000, monthlyRate: 35000, image: '/assets/images/Fleet/dzire.png' },
+    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1700, weeklyRate: 11000, monthlyRate: 37000, image: '/assets/images/Fleet/etios.png' },
+    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2200, weeklyRate: 14000, monthlyRate: 50000, image: '/assets/images/Fleet/ertiga.jpg' },
+    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 2800, weeklyRate: 18000, monthlyRate: 62000, image: '/assets/images/Fleet/crysta.png' },
   ],
   inclusions: [
     'Professional driver with Allahabad route knowledge',
@@ -333,10 +333,10 @@ export const allahabadMonthly: CarRentalData = {
     { duration: '1 Month (26 days)', km: 2080, price: 62000, vehicle: 'Innova Crysta', extraKmRate: 14 },
   ],
   availableVehicles: [
-    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1600, weeklyRate: 10000, monthlyRate: 35000, image: '/assets/images/vehicles/swift-dzire.jpg' },
-    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1700, weeklyRate: 11000, monthlyRate: 37000, image: '/assets/images/vehicles/toyota-etios.jpg' },
-    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2200, weeklyRate: 14000, monthlyRate: 50000, image: '/assets/images/vehicles/ertiga.jpg' },
-    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 2800, weeklyRate: 18000, monthlyRate: 62000, image: '/assets/images/vehicles/innova-crysta.jpg' },
+    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1600, weeklyRate: 10000, monthlyRate: 35000, image: '/assets/images/Fleet/dzire.png' },
+    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1700, weeklyRate: 11000, monthlyRate: 37000, image: '/assets/images/Fleet/etios.png' },
+    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2200, weeklyRate: 14000, monthlyRate: 50000, image: '/assets/images/Fleet/ertiga.jpg' },
+    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 2800, weeklyRate: 18000, monthlyRate: 62000, image: '/assets/images/Fleet/crysta.png' },
   ],
   inclusions: [
     'Dedicated driver for the month',
@@ -385,10 +385,10 @@ export const lucknow: CarRentalData = {
     { duration: '12 Hours', km: 120, price: 3500, vehicle: 'Innova Crysta', extraKmRate: 17 },
   ],
   availableVehicles: [
-    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1800, weeklyRate: 11000, monthlyRate: 38000, image: '/assets/images/vehicles/swift-dzire.jpg' },
-    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1900, weeklyRate: 12000, monthlyRate: 40000, image: '/assets/images/vehicles/toyota-etios.jpg' },
-    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2500, weeklyRate: 16000, monthlyRate: 55000, image: '/assets/images/vehicles/ertiga.jpg' },
-    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 3200, weeklyRate: 20000, monthlyRate: 70000, image: '/assets/images/vehicles/innova-crysta.jpg' },
+    { id: 'swift-dzire',   name: 'Swift Dzire',   category: 'Sedan (4 seats)',       dailyRate: 1800, weeklyRate: 11000, monthlyRate: 38000, image: '/assets/images/Fleet/dzire.png' },
+    { id: 'toyota-etios',  name: 'Toyota Etios',  category: 'Sedan (4 seats)',       dailyRate: 1900, weeklyRate: 12000, monthlyRate: 40000, image: '/assets/images/Fleet/etios.png' },
+    { id: 'ertiga',        name: 'Maruti Ertiga', category: 'SUV (6 seats)',         dailyRate: 2500, weeklyRate: 16000, monthlyRate: 55000, image: '/assets/images/Fleet/ertiga.jpg' },
+    { id: 'innova-crysta', name: 'Innova Crysta', category: 'Premium SUV (7 seats)', dailyRate: 3200, weeklyRate: 20000, monthlyRate: 70000, image: '/assets/images/Fleet/crysta.png' },
   ],
   inclusions: [
     'Professional driver with Lucknow city knowledge',

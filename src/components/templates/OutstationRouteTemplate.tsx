@@ -43,7 +43,7 @@ const VEHICLES = [
     id: "sedan",
     name: "Sedan",
     models: "Swift Dzire / Toyota Etios",
-    image: "/assets/images/vehicles/swift-dzire.jpg",
+    image: "/assets/images/Fleet/dzire.png",
     seats: 4,
     luggage: 2,
     fareKey: "sedan" as const,
@@ -55,7 +55,7 @@ const VEHICLES = [
     id: "ertiga",
     name: "SUV",
     models: "Maruti Ertiga / Marazzo",
-    image: "/assets/images/vehicles/ertiga.jpg",
+    image: "/assets/images/Fleet/ertiga.png",
     seats: 6,
     luggage: 3,
     fareKey: "ertiga" as const,
@@ -67,7 +67,7 @@ const VEHICLES = [
     id: "innova",
     name: "Innova",
     models: "Toyota Innova",
-    image: "/assets/images/vehicles/innova.jpg",
+    image: "/assets/images/Fleet/innova.png",
     seats: 7,
     luggage: 4,
     fareKey: "innova" as const,
@@ -79,7 +79,7 @@ const VEHICLES = [
     id: "crysta",
     name: "Innova Crysta",
     models: "Toyota Innova Crysta",
-    image: "/assets/images/vehicles/innova-crysta.jpg",
+    image: "/assets/images/Fleet/crysta.png",
     seats: 7,
     luggage: 4,
     fareKey: "crysta" as const,
@@ -177,7 +177,7 @@ export default function OutstationRouteTemplate({ data, currentSlug }: Props) {
       >
         {/* Hero background image */}
         <Image
-          src="/assets/images/varanasi-tour-package.webp"
+          src="/assets/images/varanasi-tour-package.jpeg"
           alt={`${origin} to ${destination} taxi service`}
           fill
           className="object-cover object-center opacity-20"
@@ -196,7 +196,7 @@ export default function OutstationRouteTemplate({ data, currentSlug }: Props) {
           aria-hidden="true"
         >
           <Image
-            src="/svg/mandalas/corner-mandala.svg"
+            src="/svg/ghats/corner-mandala.svg"
             alt=""
             fill
             className="object-contain"
@@ -338,7 +338,7 @@ export default function OutstationRouteTemplate({ data, currentSlug }: Props) {
       {/* Lotus divider */}
       <div className="flex justify-center my-8 md:my-10" aria-hidden="true">
         <Image
-          src="/svg/dividers/lotus-divider.svg"
+          src="/svg/ghats/lotus-divider.svg"
           alt=""
           width={320}
           height={40}
@@ -537,7 +537,7 @@ export default function OutstationRouteTemplate({ data, currentSlug }: Props) {
       {/* Ganga wave divider */}
       <div className="flex justify-center my-8" aria-hidden="true">
         <Image
-          src="/svg/dividers/ganga-wave.svg"
+          src="/svg/ghats/ganga-wave.svg"
           alt=""
           width={320}
           height={24}
@@ -730,7 +730,7 @@ export default function OutstationRouteTemplate({ data, currentSlug }: Props) {
       {/* Mandala divider */}
       <div className="flex justify-center my-8" aria-hidden="true">
         <Image
-          src="/svg/dividers/mandala-divider.svg"
+          src="/svg/ghats/mandala-divider.svg"
           alt=""
           width={320}
           height={36}
@@ -860,7 +860,7 @@ export default function OutstationRouteTemplate({ data, currentSlug }: Props) {
         >
           <div className="w-96 h-96 opacity-[0.06] text-white">
             <Image
-              src="/svg/mandalas/corner-mandala.svg"
+              src="/svg/ghats/corner-mandala.svg"
               alt=""
               width={384}
               height={384}
@@ -973,7 +973,7 @@ export default function OutstationRouteTemplate({ data, currentSlug }: Props) {
       {/* Lotus divider */}
       <div className="flex justify-center my-8" aria-hidden="true">
         <Image
-          src="/svg/dividers/lotus-divider.svg"
+          src="/svg/ghats/lotus-divider.svg"
           alt=""
           width={320}
           height={40}
@@ -1028,7 +1028,7 @@ export default function OutstationRouteTemplate({ data, currentSlug }: Props) {
       {/* Mandala divider */}
       <div className="flex justify-center my-8" aria-hidden="true">
         <Image
-          src="/svg/dividers/mandala-divider.svg"
+          src="/svg/ghats/mandala-divider.svg"
           alt=""
           width={320}
           height={36}

@@ -30,7 +30,7 @@ function PlacesHero({ city, seo }: { city: string; seo: PlacesToVisitData['seo']
         style={{ opacity: 0.07 }}
         aria-hidden="true"
       >
-        <Image src="/svg/corner-mandala.svg" alt="" fill className="object-contain" />
+        <Image src="/svg/ghats/corner-mandala.svg" alt="" fill className="object-contain" />
       </div>
 
       {/* Ghat skyline */}
@@ -214,7 +214,7 @@ function BookingCTA({ city }: { city: string }) {
         style={{ opacity: 0.08 }}
         aria-hidden="true"
       >
-        <Image src="/svg/corner-mandala.svg" alt="" fill className="object-contain" />
+        <Image src="/svg/ghats/corner-mandala.svg" alt="" fill className="object-contain" />
       </div>
 
       <div className="relative container-site text-center">

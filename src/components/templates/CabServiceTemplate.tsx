@@ -161,7 +161,7 @@ export default function CabServiceTemplate({ data }: { data: CabServiceData }) {
           aria-hidden="true"
         >
           <Image
-            src="/svg/corner-mandala.svg"
+            src="/svg/ghats/corner-mandala.svg"
             alt=""
             fill
             className="object-contain animate-mandala-slow"
@@ -391,7 +391,7 @@ export default function CabServiceTemplate({ data }: { data: CabServiceData }) {
           aria-hidden="true"
         >
           <Image
-            src="/svg/corner-mandala.svg"
+            src="/svg/ghats/corner-mandala.svg"
             alt=""
             fill
             className="object-contain animate-mandala-slow"

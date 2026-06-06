@@ -313,7 +313,7 @@ export default function TourPackageTemplate({ data }: { data: TourPackage }) {
       <section className="gradient-sacred relative overflow-hidden py-14 md:py-16">
         <div className="mandala-watermark absolute right-6 top-1/2 -translate-y-1/2 w-64 h-64 text-white"
              style={{ opacity: 0.07 }} aria-hidden="true">
-          <Image src="/svg/corner-mandala.svg" alt="" fill className="object-contain animate-mandala-slow" />
+          <Image src="/svg/ghats/corner-mandala.svg" alt="" fill className="object-contain animate-mandala-slow" />
         </div>
         <div className="container-site relative z-10 text-center">
           <h2 className="font-serif font-bold text-3xl md:text-4xl text-white mb-3">
