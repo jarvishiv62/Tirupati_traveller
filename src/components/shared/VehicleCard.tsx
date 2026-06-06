@@ -2,58 +2,71 @@
 // Full vehicle pricing card — used in CabServiceTemplate, LocalServiceTemplate,
 // CityLandingTemplate, and VehicleTemplate's RelatedVehicles section.
 // Server Component — no 'use client' needed.
+//
+// Change: added optional vehiclePageHref prop.
+//   - Full card:    vehicle name becomes a <Link> when href is provided;
+//                  a small "View full details →" text link appears below the CTAs.
+//   - Compact card: vehicle name becomes a <Link> when href is provided.
 
-import Image from "next/image";
-import { Users, Briefcase, Fuel, Star } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { buildWALink, formatPrice } from "@/lib/utils";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Users, Briefcase, Fuel, Star } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { buildWALink } from '@/lib/utils';
+
+// ─── TYPES ────────────────────────────────────────────────────────────────────
 
 export interface VehicleCardData {
-  id: string;
-  name: string;
-  image: string;
-  category: "sedan" | "suv" | "premium-suv" | "tempo" | "luxury-van";
-  tariff: number; // ₹/km
-  perDayKm: number; // km included per day
-  driverCharge: number; // ₹/day
-  seats: number;
-  luggage: number;
-  ac: boolean;
-  features: string[];
-  badge: string | null;
+  id:           string;
+  name:         string;
+  image:        string;
+  category:     'sedan' | 'suv' | 'premium-suv' | 'tempo' | 'luxury-van';
+  tariff:       number;   // ₹/km
+  perDayKm:     number;   // km included per day
+  driverCharge: number;   // ₹/day driver allowance
+  seats:        number;
+  luggage:      number;
+  ac:           boolean;
+  features:     string[];
+  badge:        string | null;
 }
 
 interface VehicleCardProps {
-  vehicle: VehicleCardData;
-  city: string; // e.g. 'Varanasi' — used for WhatsApp pre-fill
-  citySlug: string; // e.g. 'varanasi' — used for href
-  compact?: boolean; // horizontal layout for lists
-  className?: string;
-  showCTA?: boolean; // show Call + WhatsApp buttons (default: true)
+  vehicle:         VehicleCardData;
+  city:            string;     // e.g. 'Varanasi' — WhatsApp message pre-fill
+  citySlug:        string;     // e.g. 'varanasi' — kept for future use / external callers
+  compact?:        boolean;    // horizontal layout variant for lists
+  className?:      string;
+  showCTA?:        boolean;    // show Call + WhatsApp buttons (default: true)
+  vehiclePageHref?: string;    // e.g. '/varanasi/innova-crysta-on-rent-in-varanasi'
 }
+
+// ─── COMPONENT ────────────────────────────────────────────────────────────────
 
 export default function VehicleCard({
   vehicle,
   city,
   citySlug,
-  compact = false,
+  compact   = false,
   className,
-  showCTA = true,
+  showCTA   = true,
+  vehiclePageHref,
 }: VehicleCardProps) {
   const waMessage = buildWALink(
     `Hi, I want to book a ${vehicle.name} in ${city}. Please share availability and fare details.`,
   );
 
+  // ── Compact / horizontal layout ─────────────────────────────────────────────
+
   if (compact) {
-    // ── Compact / horizontal layout ──────────────────────────────────────────
     return (
       <div
         className={cn(
-          "card-warm rounded-2xl p-4 flex gap-4 items-start hover:shadow-temple transition-shadow duration-300",
+          'card-warm rounded-2xl p-4 flex gap-4 items-start hover:shadow-temple transition-shadow duration-300',
           className,
         )}
       >
-        {/* Vehicle image */}
+        {/* Vehicle thumbnail */}
         <div className="relative w-24 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-cream-dark">
           <Image
             src={vehicle.image}
@@ -73,9 +86,18 @@ export default function VehicleCard({
                   {vehicle.badge}
                 </span>
               )}
-              <h3 className="font-sans font-semibold text-text-primary text-sm leading-tight">
-                {vehicle.name}
-              </h3>
+              {/* Vehicle name — linked when vehiclePageHref provided */}
+              {vehiclePageHref ? (
+                <Link href={vehiclePageHref}>
+                  <h3 className="font-sans font-semibold text-text-primary text-sm leading-tight hover:text-primary transition-colors duration-200">
+                    {vehicle.name}
+                  </h3>
+                </Link>
+              ) : (
+                <h3 className="font-sans font-semibold text-text-primary text-sm leading-tight">
+                  {vehicle.name}
+                </h3>
+              )}
             </div>
             <div className="text-right flex-shrink-0">
               <div className="text-primary font-bold text-base font-serif leading-none">
@@ -93,7 +115,9 @@ export default function VehicleCard({
               <Briefcase size={12} />
               {vehicle.luggage} bags
             </span>
-            {vehicle.ac && <span className="text-primary font-medium">AC</span>}
+            {vehicle.ac && (
+              <span className="text-primary font-medium">AC</span>
+            )}
           </div>
         </div>
       </div>
@@ -101,10 +125,11 @@ export default function VehicleCard({
   }
 
   // ── Full card layout ────────────────────────────────────────────────────────
+
   return (
     <div
       className={cn(
-        "card-warm rounded-2xl overflow-hidden hover:shadow-temple transition-shadow duration-300 flex flex-col",
+        'card-warm rounded-2xl overflow-hidden hover:shadow-temple transition-shadow duration-300 flex flex-col',
         className,
       )}
     >
@@ -117,6 +142,7 @@ export default function VehicleCard({
           className="object-cover"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
+
         {/* Badge */}
         {vehicle.badge && (
           <div className="absolute top-3 left-3">
@@ -125,7 +151,8 @@ export default function VehicleCard({
             </span>
           </div>
         )}
-        {/* Price overlay */}
+
+        {/* Price overlay — bottom-right */}
         <div className="absolute bottom-0 right-0 bg-secondary/90 text-white px-3 py-1.5 rounded-tl-xl">
           <span className="text-xs text-white/70">Starting</span>
           <div className="font-bold text-base font-serif leading-tight">
@@ -136,38 +163,45 @@ export default function VehicleCard({
 
       {/* Card body */}
       <div className="p-4 flex flex-col flex-1">
-        {/* Name */}
-        <h3 className="font-serif font-bold text-text-primary text-lg leading-tight mb-3">
-          {vehicle.name}
-        </h3>
 
-        {/* Specs grid */}
+        {/* Vehicle name — linked to vehicle page when vehiclePageHref provided */}
+        {vehiclePageHref ? (
+          <Link href={vehiclePageHref}>
+            <h3 className="font-serif font-bold text-text-primary text-lg leading-tight mb-3 hover:text-primary transition-colors duration-200">
+              {vehicle.name}
+            </h3>
+          </Link>
+        ) : (
+          <h3 className="font-serif font-bold text-text-primary text-lg leading-tight mb-3">
+            {vehicle.name}
+          </h3>
+        )}
+
+        {/* Specs grid — 2 × 2 */}
         <div className="grid grid-cols-2 gap-2 mb-3">
-          {[
-            { icon: Users, label: `${vehicle.seats} Seats` },
-            { icon: Briefcase, label: `${vehicle.luggage} Bags` },
-            { icon: Fuel, label: vehicle.ac ? "AC" : "Non-AC" },
-            { icon: Star, label: `₹${vehicle.driverCharge}/day driver` },
-          ].map(({ icon: Icon, label }) => (
-            <div
-              key={label}
-              className="flex items-center gap-1.5 text-text-secondary text-xs"
-            >
+          {(
+            [
+              { icon: Users,    label: `${vehicle.seats} Seats` },
+              { icon: Briefcase,label: `${vehicle.luggage} Bags` },
+              { icon: Fuel,     label: vehicle.ac ? 'AC' : 'Non-AC' },
+              { icon: Star,     label: `₹${vehicle.driverCharge}/day driver` },
+            ] as const
+          ).map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-center gap-1.5 text-text-secondary text-xs">
               <Icon size={13} className="text-primary flex-shrink-0" />
               <span>{label}</span>
             </div>
           ))}
         </div>
 
-        {/* Per-day KM note */}
+        {/* Per-day km note */}
         <p className="text-xs text-text-light mb-3">
-          Includes {vehicle.perDayKm} km/day &bull; Extra km billed at tariff
-          rate
+          Includes {vehicle.perDayKm} km/day &bull; Extra km at tariff rate
         </p>
 
-        {/* Features */}
+        {/* Feature pills — first 4 */}
         <div className="flex flex-wrap gap-1.5 mb-4">
-          {vehicle.features.slice(0, 4).map((feat) => (
+          {vehicle.features.slice(0, 4).map(feat => (
             <span
               key={feat}
               className="bg-cream text-text-secondary text-xs px-2 py-0.5 rounded-full border border-border-warm"
@@ -177,23 +211,36 @@ export default function VehicleCard({
           ))}
         </div>
 
-        {/* CTAs — pushed to bottom */}
+        {/* CTAs — pushed to bottom of card */}
         {showCTA && (
           <div className="mt-auto flex flex-col gap-2">
-            <a
-              href={`tel:8726124680`}
-              className="btn-primary text-sm py-2.5 text-center w-full"
-            >
-              Call to Book
-            </a>
-            <a
-              href={waMessage}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-whatsapp text-sm py-2.5 text-center w-full"
-            >
-              WhatsApp
-            </a>
+            {/* Call + WhatsApp side by side */}
+            <div className="flex gap-2">
+              <a
+                href="tel:8726124680"
+                className="btn-primary text-sm py-2.5 text-center flex-1"
+              >
+                Call Now
+              </a>
+              <a
+                href={waMessage}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp text-sm py-2.5 text-center flex-1"
+              >
+                WhatsApp
+              </a>
+            </div>
+
+            {/* View full details — only when vehiclePageHref is provided */}
+            {vehiclePageHref && (
+              <Link
+                href={vehiclePageHref}
+                className="text-center text-xs text-primary hover:text-primary/80 underline-offset-4 hover:underline pt-0.5 transition-colors duration-200"
+              >
+                View full details &rarr;
+              </Link>
+            )}
           </div>
         )}
       </div>

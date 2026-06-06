@@ -914,3 +914,33 @@
   .no-print { display: none !important; }
   body { background: white; color: black; }
 }
+ 
+ 
+/* ══════════════════════════════════════════════════════════════════
+   ── NAVBAR ADDITIONS (mobile-nav-item + wide dropdown tweaks) ───
+══════════════════════════════════════════════════════════════════ */
+ 
+/* Mobile nav list item */
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #0A0A0A;
+  transition: background 0.15s ease, color 0.15s ease;
+  text-decoration: none;
+  width: 100%;
+}
+.mobile-nav-item:hover {
+  background: rgba(222,150,25,0.08);
+  color: #B87A10;
+}
+ 
+/* Wide dropdown panels — override min-width default */
+.navbar-dropdown.w-\[560px\] { min-width: 0; }
+.navbar-dropdown.w-\[480px\] { min-width: 0; }
+ 
+/* primary-pale background util (used inline in dropdown hover) */
+.hover\:bg-primary-pale:hover { background-color: #FDF3E0; }
+ 

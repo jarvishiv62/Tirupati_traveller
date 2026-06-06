@@ -24,13 +24,14 @@ export type OutstationLink = {
 
 export type CityLandingData = {
   city: string;
-  aliases: string[];          // rotating names shown in hero H1
-  heroText: string;           // subtitle below H1
-  heroImage: string;          // full-path from public/
-  services: CityService[];    // max 6 items shown in ServicesIcons
-  vehicles: string[];         // vehicle IDs pulled from vehicles.ts
-  places: CityPlace[];        // shown in PlacesGrid (max 8)
-  outstationLinks: OutstationLink[];
+  aliases: string[];                                             // rotating names shown in hero H1
+  heroText: string;                                              // subtitle below H1
+  heroImage: string;                                             // full-path from public/
+  services: { label: string; icon: string; slug: string }[];     // max 6 items shown in ServicesIcons
+  vehicles: string[];                                            // vehicle IDs pulled from vehicles.ts
+  places: { name: string; image: string; distance: string }[];   //shown in PlacesGrid (max 8)
+  outstationLinks: { destination: string; slug: string; fare: number }[];
+  faqs?: { q: string; a: string }[];
   seo: {
     title: string;
     description: string;
