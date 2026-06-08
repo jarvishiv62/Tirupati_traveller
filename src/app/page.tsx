@@ -5,11 +5,11 @@ import TourPackageCards from '@/components/home/TourPackageCards';
 import CTABanner from '@/components/home/CTABanner';
 import ThemeExplorer from '@/components/home/ThemeExplorer';
 import AboutSection from '@/components/home/AboutSection';
-import WhyChooseUs from '@/components/home/WhyChooseUs';
+import WhyChooseUs from '@/components/shared/WhyChooseUs';
 import FAQSection from '@/components/home/FAQSection';
-import SacredDivider from '@/components/shared/SacredDivider';
 import Footer from '@/components/shared/Footer';
 import Navbar from '@/components/shared/Navbar';
+import OffersSlider from '@/components/shared/OffersSlider';
 
 
 // ── SEO Metadata ─────────────────────────────────────────────────────────────
@@ -87,41 +87,45 @@ export default function HomePage() {
       {/* 1. Hero — full viewport */}
       <HeroSection />
 
-      {/* lotus divider: after hero, before first content section */}
-      <SacredDivider variant="lotus" />
+      {/*offers section*/}
+      <OffersSlider tags={["all"]} className="my-8" />
 
+      {/* lotus divider: after hero, before first content section */}
+      <img src="/svg/ghats/lotus-divider.svg" alt="Lotus divider" className="w-1/4 h-auto mx-auto" />
       {/* 2. Destination Cards — bg-section-cream */}
       <DestinationCards />
 
       {/* wave divider: between mid-page sections */}
-      <SacredDivider variant="wave" />
+      <img src="/svg/ghats/mandala-divider.svg" alt="mandala divider" className="w-1/4 h-auto mx-auto" />
 
       {/* 3. Tour Package Cards — bg-section-white */}
       <TourPackageCards />
 
       {/* mandala divider: before CTA */}
-      <SacredDivider variant="mandala" />
+      <img src="/svg/ghats/om-wave.svg" alt="om divider" className="w-1/4 h-auto mx-auto" />
 
       {/* 4. CTA Banner — full-bleed gradient-sacred */}
       <CTABanner />
 
       {/* wave divider */}
-      <SacredDivider variant="wave" />
+      <img src="/svg/ghats/lotus-divider.svg" alt="lotus divider" className="w-1/4 h-auto mx-auto" />
 
       {/* 5. Theme Explorer — bg-section-cream */}
       <ThemeExplorer />
 
       {/* wave divider */}
-      <SacredDivider variant="wave" />
+      <img src="/svg/ghats/mandala-divider.svg" alt="mandala divider" className="w-1/4 h-auto mx-auto" />
 
       {/* 6. About Section — bg-section-white */}
       <AboutSection />
+      <img src="/svg/ghats/om-wave.svg" alt="om divider" className="w-1/4 h-auto mx-auto" />
 
       {/* 7. Why Choose Us — bg-section-cream */}
       <WhyChooseUs />
+      <img src="/svg/ghats/lotus-divider.svg" alt="Lotus divider" className="w-1/4 h-auto mx-auto" /> 
 
       {/* lotus divider: before last section */}
-      <SacredDivider variant="lotus" />
+      {/* <SacredDivider variant="lotus" /> */}
 
       {/* 8. FAQ Section — bg-section-white (last section before footer) */}
       <FAQSection />

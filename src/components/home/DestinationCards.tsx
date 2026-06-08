@@ -22,7 +22,7 @@ const DESTINATIONS = [
     city: "Ayodhya",
     slug: "/ayodhya",
     cabSlug: "/ayodhya/one-way-cab-in-ayodhya",
-    image: "/assets/images/Ayodhya/ram_janm.webp",
+    image: "/assets/images/Ayodhya/ayodhya.webp",
     alt: "Ram Mandir Ayodhya",
     badge: "5 Tours",
     subtitle: "Ram Janmabhoomi",

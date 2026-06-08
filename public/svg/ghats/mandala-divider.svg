@@ -1,10 +1,25 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="60" cy="60" r="55" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
-  <circle cx="60" cy="60" r="42" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
-  <circle cx="60" cy="60" r="28" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
-  <circle cx="60" cy="60" r="8" fill="currentColor" opacity="0.7"/>
-  <ellipse cx="60" cy="32" rx="5" ry="14" fill="currentColor" opacity="0.6"/>
-  <ellipse cx="60" cy="88" rx="5" ry="14" fill="currentColor" opacity="0.6"/>
-  <ellipse cx="32" cy="60" rx="14" ry="5" fill="currentColor" opacity="0.6"/>
-  <ellipse cx="88" cy="60" rx="14" ry="5" fill="currentColor" opacity="0.6"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 520 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .db-l1{stroke-dasharray:520;stroke-dashoffset:520;animation:db-draw 2.5s ease-out infinite;}
+    .db-l2{stroke-dasharray:520;stroke-dashoffset:520;animation:db-draw 2.5s ease-out .22s infinite;}
+    .db-on{opacity:0;animation:db-on 2.5s ease-out infinite;}
+    @keyframes db-draw{ 0%{stroke-dashoffset:520} 45%,80%{stroke-dashoffset:0} 100%{stroke-dashoffset:520;opacity:0} }
+    @keyframes db-on  { 0%,38%{opacity:0} 60%,80%{opacity:1} 100%{opacity:0} }
+  </style>
+  <line x1="0" y1="22" x2="520" y2="22" stroke="#DE9619" stroke-width="0.85" class="db-l1"/>
+  <line x1="0" y1="38" x2="520" y2="38" stroke="#DE9619" stroke-width="0.85" class="db-l2"/>
+  <g class="db-on">
+    <path d="M118 30 L128 22 L138 30 L128 38Z" stroke="#DE9619" stroke-width="1" fill="#DE9619" fill-opacity="0.2"/>
+    <path d="M382 30 L392 22 L402 30 L392 38Z" stroke="#DE9619" stroke-width="1" fill="#DE9619" fill-opacity="0.2"/>
+    <circle cx="58"  cy="30" r="2.2" fill="#DE9619" opacity="0.55"/>
+    <circle cx="198" cy="30" r="2.2" fill="#DE9619" opacity="0.55"/>
+    <circle cx="322" cy="30" r="2.2" fill="#DE9619" opacity="0.55"/>
+    <circle cx="462" cy="30" r="2.2" fill="#DE9619" opacity="0.55"/>
+    <path d="M249 30 L260 17 L271 30 L260 43Z" stroke="#DE9619" stroke-width="1.4"
+          fill="#DE9619" fill-opacity="0.32"/>
+    <circle cx="260" cy="30" r="3.5" fill="#DE9619"/>
+  </g>
+  <path d="M6 18 L6 42 L12 42"      stroke="#DE9619" stroke-width="1.2" fill="none" opacity="0.6"/>
+  <path d="M514 18 L514 42 L508 42" stroke="#DE9619" stroke-width="1.2" fill="none" opacity="0.6"/>
 </svg>

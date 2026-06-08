@@ -83,11 +83,11 @@ Please share the price.`
   );
 
   return (
-    <section className="cta-banner-section">
+    <section className="cta-banner-section mt-12 mb-12">
       <div className="cta-banner-bg" aria-hidden="true" />
 
       {/* Mandala watermarks */}
-      <div className="cta-mandala cta-mandala--left"  aria-hidden="true">
+      <div className="cta-mandala cta-mandala--left "  aria-hidden="true">
         <InlineMandala className="w-full h-full animate-mandala-slow" />
       </div>
       <div className="cta-mandala cta-mandala--right" aria-hidden="true">

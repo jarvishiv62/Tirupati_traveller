@@ -380,7 +380,7 @@ export default function AccommodationTemplate({ data }: Props) {
           {/* Wave divider */}
           <div className="flex justify-center mb-10" aria-hidden="true">
             <Image
-              src="/svg/dividers/ganga-wave.svg"
+              src="/svg/dividers/om-wave.svg"
               alt=""
               width={320}
               height={24}

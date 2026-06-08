@@ -537,7 +537,7 @@ export default function OutstationRouteTemplate({ data, currentSlug }: Props) {
       {/* Ganga wave divider */}
       <div className="flex justify-center my-8" aria-hidden="true">
         <Image
-          src="/svg/ghats/ganga-wave.svg"
+          src="/svg/ghats/om-wave.svg"
           alt=""
           width={320}
           height={24}

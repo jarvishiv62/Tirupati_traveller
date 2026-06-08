@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 520 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bk-lft{stroke-dasharray:160;stroke-dashoffset:160;animation:bk-dl 2.4s ease-out infinite;}
+    .bk-rgt{stroke-dasharray:160;stroke-dashoffset:-160;animation:bk-dr 2.4s ease-out infinite;}
+    .bk-in {opacity:0;animation:bk-in 2.4s ease-out infinite;}
+    @keyframes bk-dl{ 0%{stroke-dashoffset:160} 42%,82%{stroke-dashoffset:0} 100%{stroke-dashoffset:160;opacity:0} }
+    @keyframes bk-dr{ 0%{stroke-dashoffset:-160} 42%,82%{stroke-dashoffset:0} 100%{stroke-dashoffset:-160;opacity:0} }
+    @keyframes bk-in{ 0%,36%{opacity:0} 58%,82%{opacity:1} 100%{opacity:0} }
+  </style>
+  <path d="M100 12 L88 12 L80 18 L80 42 L88 48 L100 48"
+        stroke="#DE9619" stroke-width="1.6" class="bk-lft"/>
+  <path d="M100 18 L92 18 L86 22 L86 38 L92 42 L100 42"
+        stroke="#DE9619" stroke-width="0.7" opacity="0.5" class="bk-lft"/>
+  <path d="M420 12 L432 12 L440 18 L440 42 L432 48 L420 48"
+        stroke="#DE9619" stroke-width="1.6" class="bk-rgt"/>
+  <path d="M420 18 L428 18 L434 22 L434 38 L428 42 L420 42"
+        stroke="#DE9619" stroke-width="0.7" opacity="0.5" class="bk-rgt"/>
+  <g class="bk-in">
+    <line x1="100" y1="30" x2="195" y2="30" stroke="#DE9619" stroke-width="0.7" opacity="0.5"/>
+    <line x1="325" y1="30" x2="420" y2="30" stroke="#DE9619" stroke-width="0.7" opacity="0.5"/>
+    <circle cx="205" cy="30" r="2.8" fill="#DE9619" opacity="0.7"/>
+    <circle cx="220" cy="30" r="2"   fill="#DE9619" opacity="0.45"/>
+    <circle cx="315" cy="30" r="2.8" fill="#DE9619" opacity="0.7"/>
+    <circle cx="300" cy="30" r="2"   fill="#DE9619" opacity="0.45"/>
+    <text x="260" y="40" text-anchor="middle" font-size="22"
+          fill="#DE9619" font-family="serif" opacity="0.95">ॐ</text>
+  </g>
+</svg>
