@@ -14,7 +14,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Kashi Vishwanath Temple',
       description:
         'One of the twelve Jyotirlingas, the Kashi Vishwanath Temple is the holiest shrine of Lord Shiva. The golden spire gleaming over the Ganges draws millions of devotees every year.',
-      image: '/Images/places/kashi-vishwanath.webp',
+      image: '/Images/VNS/kashi-vishwanath.webp',
       distance: '0 km from city centre',
       category: 'Temple',
     },
@@ -22,7 +22,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Dashashwamedh Ghat',
       description:
         'The main ghat of Varanasi and site of the spectacular Ganga Aarti every evening. Watching the lamps float on the Ganges here is an unforgettable experience.',
-      image: '/Images/places/dashashwamedh.webp',
+      image: '/Images/VNS/dashashwamedh.webp',
       distance: '0.5 km from city centre',
       category: 'Ghat',
     },
@@ -30,7 +30,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Sarnath',
       description:
         'The sacred site where Buddha delivered his first sermon. Home to the Dhamek Stupa, Ashoka Pillar, and the Sarnath Museum with priceless Buddhist artefacts.',
-      image: '/Images/places/sarnath.webp',
+      image: '/Images/VNS/sarnath.webp',
       distance: '12 km from city centre',
       category: 'Heritage',
     },
@@ -38,7 +38,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Manikarnika Ghat',
       description:
         'The most sacred cremation ghat in Hinduism, believed to be the spot where Lord Shiva dropped Sati\'s earring. Fires here have burned continuously for centuries.',
-      image: '/Images/places/manikarnika.webp',
+      image: '/Images/VNS/manikarnika.webp',
       distance: '1 km from city centre',
       category: 'Ghat',
     },
@@ -46,7 +46,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Ramnagar Fort',
       description:
         'A 17th-century fort on the eastern bank of the Ganges, built by the Maharaja of Varanasi. Houses a remarkable museum with vintage cars, arms, and palanquins.',
-      image: '/Images/places/ramnagar.webp',
+      image: '/Images/VNS/ramnagar.webp',
       distance: '14 km from city centre',
       category: 'Heritage',
     },
@@ -54,7 +54,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Assi Ghat',
       description:
         'The southernmost major ghat of Varanasi, famous for its early morning Subah-e-Banaras programme — yoga, chanting, and sunrise over the Ganges.',
-      image: '/Images/places/assi-ghat.webp',
+      image: '/Images/VNS/assi-ghat.webp',
       distance: '3 km from city centre',
       category: 'Ghat',
     },
@@ -62,7 +62,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Tulsi Manas Temple',
       description:
         'Built in 1964 at the site where Goswami Tulsidas wrote the Ramcharitmanas. The walls are engraved with verses from this sacred text.',
-      image: '/Images/places/tulsi-manas.webp',
+      image: '/Images/VNS/tulsi-manas.webp',
       distance: '2 km from city centre',
       category: 'Temple',
     },
@@ -70,7 +70,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Banaras Hindu University',
       description:
         'One of Asia\'s largest residential universities, founded by Pandit Madan Mohan Malaviya. The sprawling campus houses the magnificent Vishwanath Temple and the Bharat Kala Bhavan museum.',
-      image: '/Images/places/bhu.webp',
+      image: '/Images/VNS/bhu.webp',
       distance: '4 km from city centre',
       category: 'Heritage',
     },
@@ -78,7 +78,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Durga Temple (Durga Kund)',
       description:
         'An 18th-century temple dedicated to Goddess Durga, built in the Nagara style of architecture. The adjacent tank (kund) is considered sacred.',
-      image: '/Images/places/durga-temple.webp',
+      image: '/Images/VNS/durga-temple.webp',
       distance: '3.5 km from city centre',
       category: 'Temple',
     },
@@ -86,7 +86,7 @@ export const varanasi: PlacesToVisitData = {
       name: 'Sankat Mochan Hanuman Temple',
       description:
         'Founded by Goswami Tulsidas, this beloved Hanuman temple is one of the most visited in Varanasi. Tuesdays and Saturdays see thousands of devotees.',
-      image: '/Images/places/sankat-mochan.webp',
+      image: '/Images/VNS/sankat-mochan.webp',
       distance: '3 km from city centre',
       category: 'Temple',
     },

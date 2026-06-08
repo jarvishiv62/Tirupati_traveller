@@ -75,7 +75,7 @@ function toCardData(v: VehicleData): VehicleCardData {
   return {
     id:           v.slug,
     name:         v.vehicleName,
-    image:        v.images[0] ?? '/swift-dzire.png',
+    image:        v.images[0] ?? '/dzire.png',
     category:     v.specs.seats >= 7 ? 'suv' : 'sedan',
     tariff:       v.pricePerKm,
     perDayKm:     250,

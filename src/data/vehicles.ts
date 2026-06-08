@@ -38,7 +38,7 @@ export const varanasiInnova: VehicleData = {
   specs: { seats: 7, ac: true, luggage: '3 bags', fuelType: 'Diesel' },
   pricePerKm: 11,
   basePrice: 1500,
-  images: ['/innova.png'],
+  images: ['/assets/images/Fleet/innova.png'],
   features: ['7-Seater AC Cab', 'GPS Tracking', 'Pushback Seats', 'Music System', 'Professional Driver', 'Toll Inclusive', 'First Aid Kit', '24/7 Support'],
   faqs: [
     { q: 'What is the price of Innova Crysta per km in Varanasi?', a: 'Innova Crysta is available at ₹11/km from Varanasi. Call 8726124680 for package rates.' },
@@ -61,7 +61,7 @@ export const ayodhyaInnova: VehicleData = {
   specs: { seats: 7, ac: true, luggage: '3 bags', fuelType: 'Diesel' },
   pricePerKm: 11,
   basePrice: 1500,
-  images: ['/innova.png'],
+  images: ['/assets/images/Fleet/innova.png'],
   features: ['7-Seater AC Cab', 'GPS Tracking', 'Pushback Seats', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Innova', 'Ayodhya'),
   seo: {
@@ -78,7 +78,7 @@ export const allahabadInnova: VehicleData = {
   specs: { seats: 7, ac: true, luggage: '3 bags', fuelType: 'Diesel' },
   pricePerKm: 11,
   basePrice: 1500,
-  images: ['/innova.png'],
+  images: ['/assets/images/Fleet/innova.png'],
   features: ['7-Seater AC Cab', 'GPS Tracking', 'Pushback Seats', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Innova', 'Allahabad'),
   seo: {
@@ -95,7 +95,7 @@ export const lucknowInnova: VehicleData = {
   specs: { seats: 7, ac: true, luggage: '3 bags', fuelType: 'Diesel' },
   pricePerKm: 11,
   basePrice: 1500,
-  images: ['/innova.png'],
+  images: ['/assets/images/Fleet/innova.png'],
   features: ['7-Seater AC Cab', 'GPS Tracking', 'Pushback Seats', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Innova', 'Lucknow'),
   seo: {
@@ -113,7 +113,7 @@ export const varanasiErtiga: VehicleData = {
   specs: { seats: 6, ac: true, luggage: '2 bags', fuelType: 'Petrol/CNG' },
   pricePerKm: 11,
   basePrice: 1200,
-  images: ['/ertiga.png'],
+  images: ['/assets/images/Fleet/ertiga.png'],
   features: ['6-Seater AC Cab', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support', 'Spacious Boot'],
   faqs: [
     { q: 'What is the price of Ertiga per km in Varanasi?', a: 'Ertiga is available at ₹11/km from Varanasi. Call 8726124680.' },
@@ -136,7 +136,7 @@ export const ayodhyaErtiga: VehicleData = {
   specs: { seats: 6, ac: true, luggage: '2 bags', fuelType: 'Petrol/CNG' },
   pricePerKm: 11,
   basePrice: 1200,
-  images: ['/ertiga.png'],
+  images: ['/assets/images/Fleet/ertiga.png'],
   features: ['6-Seater AC Cab', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Ertiga', 'Ayodhya'),
   seo: {
@@ -153,7 +153,7 @@ export const allahabadErtiga: VehicleData = {
   specs: { seats: 6, ac: true, luggage: '2 bags', fuelType: 'Petrol/CNG' },
   pricePerKm: 11,
   basePrice: 1200,
-  images: ['/ertiga.png'],
+  images: ['/assets/images/Fleet/ertiga.png'],
   features: ['6-Seater AC Cab', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Ertiga', 'Allahabad'),
   seo: {
@@ -171,7 +171,7 @@ export const varanasiDzire: VehicleData = {
   specs: { seats: 4, ac: true, luggage: '2 bags', fuelType: 'Petrol/CNG' },
   pricePerKm: 10.50,
   basePrice: 1000,
-  images: ['/swift-dzire.png'],
+  images: ['/assets/images/Fleet/dzire.png'],
   features: ['4-Seater AC Sedan', 'GPS Tracking', 'Music System', 'Professional Driver', 'Most Popular', '24/7 Support'],
   faqs: [
     { q: 'What is the Swift Dzire fare per km in Varanasi?', a: 'Swift Dzire is available at ₹10.50/km from Varanasi.' },
@@ -183,7 +183,7 @@ export const varanasiDzire: VehicleData = {
   seo: {
     title: 'Swift Dzire Taxi Service in Varanasi | Sedan Cab | Tirupati Travel',
     description: 'Book Swift Dzire taxi in Varanasi. 4-seater AC sedan, ₹10.50/km. Best for outstation. Call 8726124680.',
-    canonical: `${BASE}/varanasi/swift-dzire-taxi-service-in-varanasi`,
+    canonical: `${BASE}/varanasi-dzire-taxi-service-in-varanasi`,
   },
 };
 
@@ -194,13 +194,13 @@ export const ayodhyaDzire: VehicleData = {
   specs: { seats: 4, ac: true, luggage: '2 bags', fuelType: 'Petrol/CNG' },
   pricePerKm: 10.50,
   basePrice: 1000,
-  images: ['/swift-dzire.png'],
+  images: ['/assets/images/Fleet/dzire.png'],
   features: ['4-Seater AC Sedan', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Swift Dzire', 'Ayodhya'),
   seo: {
     title: 'Swift Dzire Cab in Ayodhya | Sedan Taxi | Tirupati Travel',
     description: 'Book Swift Dzire cab in Ayodhya. 4-seater AC sedan. Call 8726124680.',
-    canonical: `${BASE}/ayodhya/swift-dzire-cab-in-ayodhya`,
+    canonical: `${BASE}/ayodhya-dzire-cab-in-ayodhya`,
   },
 };
 
@@ -211,13 +211,13 @@ export const allahabadDzire: VehicleData = {
   specs: { seats: 4, ac: true, luggage: '2 bags', fuelType: 'Petrol/CNG' },
   pricePerKm: 10.50,
   basePrice: 1000,
-  images: ['/swift-dzire.png'],
+  images: ['/assets/images/Fleet/dzire.png'],
   features: ['4-Seater AC Sedan', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Swift Dzire', 'Allahabad'),
   seo: {
     title: 'Swift Dzire Cab in Allahabad | Sedan Taxi | Tirupati Travel',
     description: 'Book Swift Dzire cab in Allahabad. 4-seater AC sedan. Call 8726124680.',
-    canonical: `${BASE}/allahabad/swift-dzire-cab-in-allahabad`,
+    canonical: `${BASE}/allahabad-dzire-cab-in-allahabad`,
   },
 };
 
@@ -229,7 +229,7 @@ export const varanasiSedan: VehicleData = {
   specs: { seats: 4, ac: true, luggage: '2 bags', fuelType: 'Petrol/CNG' },
   pricePerKm: 10.50,
   basePrice: 1000,
-  images: ['/swift-dzire.png'],
+  images: ['/assets/images/Fleet/dzire.png'],
   features: ['4-Seater AC Sedan', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Sedan', 'Varanasi'),
   seo: {
@@ -246,7 +246,7 @@ export const ayodhyaSedan: VehicleData = {
   specs: { seats: 4, ac: true, luggage: '2 bags', fuelType: 'Petrol/CNG' },
   pricePerKm: 10.50,
   basePrice: 1000,
-  images: ['/swift-dzire.png'],
+  images: ['/assets/images/Fleet/dzire.png'],
   features: ['4-Seater AC Sedan', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Sedan', 'Ayodhya'),
   seo: {
@@ -263,7 +263,7 @@ export const allahabadSedan: VehicleData = {
   specs: { seats: 4, ac: true, luggage: '2 bags', fuelType: 'Petrol/CNG' },
   pricePerKm: 10.50,
   basePrice: 1000,
-  images: ['/swift-dzire.png'],
+  images: ['/assets/images/Fleet/dzire.png'],
   features: ['4-Seater AC Sedan', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Sedan', 'Allahabad'),
   seo: {
@@ -281,7 +281,7 @@ export const varanasiEtios: VehicleData = {
   specs: { seats: 4, ac: true, luggage: '2 bags', fuelType: 'Petrol' },
   pricePerKm: 10.50,
   basePrice: 1000,
-  images: ['/swift-dzire.png'],
+  images: ['/assets/images/Fleet/dzire.png'],
   features: ['4-Seater AC Sedan', 'GPS Tracking', 'Music System', 'Professional Driver', 'Spacious Cabin', '24/7 Support'],
   faqs: defaultFaqs('Toyota Etios', 'Varanasi'),
   seo: {
@@ -298,7 +298,7 @@ export const ayodhyaEtios: VehicleData = {
   specs: { seats: 4, ac: true, luggage: '2 bags', fuelType: 'Petrol' },
   pricePerKm: 10.50,
   basePrice: 1000,
-  images: ['/swift-dzire.png'],
+  images: ['/assets/images/Fleet/dzire.png'],
   features: ['4-Seater AC Sedan', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Toyota Etios', 'Ayodhya'),
   seo: {
@@ -315,7 +315,7 @@ export const allahabadEtios: VehicleData = {
   specs: { seats: 4, ac: true, luggage: '2 bags', fuelType: 'Petrol' },
   pricePerKm: 10.50,
   basePrice: 1000,
-  images: ['/swift-dzire.png'],
+  images: ['/assets/images/Fleet/dzire.png'],
   features: ['4-Seater AC Sedan', 'GPS Tracking', 'Music System', 'Professional Driver', '24/7 Support'],
   faqs: defaultFaqs('Toyota Etios', 'Allahabad'),
   seo: {
